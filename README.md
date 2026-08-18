@@ -1,3 +1,32 @@
-# Agent departments
+# Teamulate
 
-Site for Chris Momchilov: emulating business departments with AI agents.
+Site for Teamulate / Chris Momchilov: emulating business departments with AI agents.
+
+Four static pages. No build step.
+
+| Page | File |
+| --- | --- |
+| Home | `index.html` |
+| Marketing department | `marketing.html` |
+| How we work | `how-we-work.html` |
+| Proof | `proof.html` |
+
+## Preview locally
+
+From this folder:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open [http://localhost:8080](http://localhost:8080).
+
+You can also open `index.html` directly in a browser. A local server keeps the org-chart links and hashes predictable.
+
+Official logo: `assets/teamulate-logo.png` (header). Cropped mark: `assets/teamulate-mark.png` (favicon). Shown as-is on the dark site.
+
+Official Grok Bot visuals live in `assets/` (wordmark and Agent Dashboard still from x.ai). They are product creative, not screenshots of Chris’s crew.
+
+## Contact
+
+Chris Momchilov · Barrie, Ontario · christo.momchilov@gmail.com
