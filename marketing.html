@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marketing department — Chris Momchilov</title>
+    <meta
+      name="description"
+      content="A marketing department of AI agents: coordinator above, manager who assigns, designer, social, and paid ads. You stay the owner."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,480;6..72,520;6..72,560&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap">
+        <a class="brand" href="index.html">
+          <span class="brand-name">Chris Momchilov</span>
+          <span class="brand-place">Barrie, Ontario</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="marketing.html" aria-current="page">Marketing</a>
+          <a href="how-we-work.html">How we work</a>
+          <a href="proof.html">Proof</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="hero wrap wrap--narrow">
+        <p class="kicker">The product</p>
+        <h1>A marketing department, not a pile of prompts</h1>
+        <p class="lede">
+          Click a seat. The coordinator sits above the department. The manager assigns. The
+          specialists make the work. You still own the send.
+        </p>
+      </header>
+
+      <section class="section wrap" aria-labelledby="chart-heading">
+        <h2 id="chart-heading" class="visually-hidden">Clickable hierarchy</h2>
+        <figure class="org-block">
+          <figcaption class="visually-hidden">
+            Clickable org chart. Coordinator above the marketing department. Marketing manager over
+            designer, social, and paid ads.
+          </figcaption>
+          <div class="org" aria-label="Marketing department hierarchy">
+            <ul>
+              <li>
+                <a class="node node--coord" href="#coordinator" data-agent="coordinator">
+                  <span class="node-role">Coordinator</span>
+                  <span class="node-note">Above the department</span>
+                </a>
+                <ul>
+                  <li>
+                    <div class="org-dept">
+                      <p class="org-dept-label">Marketing department</p>
+                      <a class="node node--dept" href="#manager" data-agent="manager">
+                        <span class="node-role">Marketing Manager</span>
+                        <span class="node-note">Watches the pipeline. Does not touch Canva.</span>
+                      </a>
+                      <ul>
+                        <li>
+                          <a class="node" href="#designer" data-agent="designer">
+                            <span class="node-role">Designer</span>
+                            <span class="node-note">Canva</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="node" href="#social" data-agent="social">
+                            <span class="node-role">Social</span>
+                            <span class="node-note">Instagram, LinkedIn</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a class="node" href="#ads" data-agent="ads">
+                            <span class="node-role">Paid ads</span>
+                            <span class="node-note">Google Ads, Meta</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <p class="org-caption">Each box opens the seat. You sit above all of this.</p>
+        </figure>
+      </section>
+
+      <section class="section" aria-labelledby="seats-heading">
+        <div class="wrap">
+          <h2 id="seats-heading">The seats</h2>
+          <div class="agent-grid">
+            <article
+              class="agent-card agent-card--wide"
+              id="coordinator"
+              data-card="coordinator"
+            >
+              <p class="agent-meta">Above the department</p>
+              <h3>Coordinator</h3>
+              <p>
+                Holds the queue. Sees when a draft is stuck. Escalates to you when a human has to
+                decide.
+              </p>
+              <p>Keeps the manager honest about what is waiting. Does not live inside marketing.</p>
+              <p>Moves work across the week so the department is not a pile of open tabs.</p>
+              <dl>
+                <dt>Tools</dt>
+                <dd>The shared board we use for drafts, assignments, and approvals.</dd>
+                <dt>Never</dt>
+                <dd>Does not write the posts, design the pages, or spend the ad budget.</dd>
+              </dl>
+            </article>
+
+            <article class="agent-card agent-card--wide" id="manager" data-card="manager">
+              <p class="agent-meta">Inside the department · top seat</p>
+              <h3>Marketing Manager</h3>
+              <p>Watches the pipeline. Knows what is in draft, what is blocked, and what is next.</p>
+              <p>Assigns work to Designer, Social, and Paid ads so the pieces fit.</p>
+              <p>Reads the output. Sends it up. Does not do the specialists’ jobs for them.</p>
+              <dl>
+                <dt>Tools</dt>
+                <dd>The board, the briefs, the calendar.</dd>
+                <dt>Never</dt>
+                <dd>Does not open Canva. Does not post. Does not buy the ads.</dd>
+              </dl>
+            </article>
+
+            <article class="agent-card" id="designer" data-card="designer">
+              <p class="agent-meta">Reports to the manager</p>
+              <h3>Designer</h3>
+              <p>Turns a brief into a page, a graphic, a layout.</p>
+              <p>Keeps the look consistent from one piece to the next.</p>
+              <p>Hands the draft back up. Waits.</p>
+              <dl>
+                <dt>Tools</dt>
+                <dd>Canva.</dd>
+                <dt>Never</dt>
+                <dd>Does not publish, and does not touch the ad accounts.</dd>
+              </dl>
+            </article>
+
+            <article class="agent-card" id="social" data-card="social">
+              <p class="agent-meta">Reports to the manager</p>
+              <h3>Social</h3>
+              <p>Drafts Instagram and LinkedIn from the calendar.</p>
+              <p>Builds a week of posts so you are not writing from a blank box.</p>
+              <p>Queues. Does not fire.</p>
+              <dl>
+                <dt>Tools</dt>
+                <dd>Instagram, LinkedIn.</dd>
+                <dt>Never</dt>
+                <dd>Does not hit publish, and does not change brand passwords.</dd>
+              </dl>
+            </article>
+
+            <article class="agent-card agent-card--wide" id="ads" data-card="ads">
+              <p class="agent-meta">Reports to the manager</p>
+              <h3>Paid ads</h3>
+              <p>Builds campaign structure in Google Ads and Meta.</p>
+              <p>Writes the variants. Marks what is ready for your eye.</p>
+              <p>Flags spend questions instead of guessing.</p>
+              <dl>
+                <dt>Tools</dt>
+                <dd>Google Ads, Meta.</dd>
+                <dt>Never</dt>
+                <dd>Does not set a payment method or raise a budget without you.</dd>
+              </dl>
+            </article>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn" href="how-we-work.html">How the first week works</a>
+            <a class="btn btn--ghost" href="mailto:christo.momchilov@gmail.com">Email Chris</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        Chris Momchilov · Barrie, Ontario ·
+        <a href="mailto:christo.momchilov@gmail.com">christo.momchilov@gmail.com</a>
+      </div>
+    </footer>
+    <script src="js/site.js"></script>
+  </body>
+</html>
