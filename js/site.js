@@ -3,7 +3,12 @@
 
   function glowMarkup() {
     return (
-      '<defs><filter id="wire-glow" x="-20%" y="-20%" width="140%" height="140%">' +
+      "<defs>" +
+      '<linearGradient id="wire-grad" x1="0" y1="0" x2="0" y2="1">' +
+      '<stop offset="0%" stop-color="#ff5a7a"/>' +
+      '<stop offset="100%" stop-color="#3ecbff"/>' +
+      "</linearGradient>" +
+      '<filter id="wire-glow" x="-20%" y="-20%" width="140%" height="140%">' +
       '<feGaussianBlur stdDeviation="2.2" result="b"/>' +
       '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
       "</filter></defs>"

@@ -23,6 +23,8 @@ Then open [http://localhost:8080](http://localhost:8080).
 
 You can also open `index.html` directly in a browser. A local server keeps the org-chart links and hashes predictable.
 
+Official Grok Bot visuals live in `assets/` (wordmark and Agent Dashboard still from x.ai). They are product creative, not screenshots of Chris’s crew.
+
 ## Contact
 
 Chris Momchilov · Barrie, Ontario · christo.momchilov@gmail.com

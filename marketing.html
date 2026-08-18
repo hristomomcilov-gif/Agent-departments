@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#070708" />
+    <meta name="theme-color" content="#050506" />
     <title>Marketing department — Chris Momchilov</title>
     <meta
       name="description"
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -39,7 +39,7 @@
     <main id="main">
       <header class="hero wrap">
         <p class="kicker">The product</p>
-        <h1>A marketing department, not a pile of prompts</h1>
+        <h1>A marketing <span class="grad-warm">department</span>, not a pile of <span class="grad-cool">prompts</span></h1>
         <p class="lede">
           Tap a seat. The coordinator sits above the department. The manager assigns. The
           specialists make the work. You still own the send.
@@ -49,7 +49,8 @@
       <section class="section wrap" aria-labelledby="chart-heading">
         <h2 id="chart-heading" class="visually-hidden">Clickable hierarchy</h2>
         <div class="product-hud">
-          <figure class="org-block">
+          <div class="hero-frame">
+        <figure class="org-block">
             <figcaption class="visually-hidden">
               Clickable org chart. Coordinator above the marketing department. Marketing manager
               over designer, social, and paid ads.
@@ -97,6 +98,7 @@
             </div>
             <p class="org-caption">Select a module. You sit above all of this.</p>
           </figure>
+          </div>
 
           <div class="module-bay" aria-live="polite">
             <article class="rack-module is-live" id="coordinator" data-card="coordinator">
