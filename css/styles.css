@@ -61,8 +61,13 @@ body {
   background:
     radial-gradient(ellipse 70% 45% at 0% -10%, rgba(255, 90, 122, 0.16), transparent 55%),
     radial-gradient(ellipse 60% 40% at 100% 0%, rgba(62, 203, 255, 0.14), transparent 50%),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: auto, auto, 120px 100%;
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(8.333% - 1px),
+      rgba(255, 255, 255, 0.045) calc(8.333% - 1px),
+      rgba(255, 255, 255, 0.045) 8.333%
+    );
   background-color: var(--bg);
 }
 
@@ -133,7 +138,31 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  padding-block: 0.85rem;
+  padding-block: 0.95rem;
+}
+
+.btn--header {
+  display: none;
+}
+
+@media (min-width: 880px) {
+  .site-header .wrap {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .nav {
+    justify-self: center;
+  }
+
+  .btn--header {
+    display: inline-flex;
+    justify-self: end;
+    min-height: 42px;
+    padding: 0.4rem 1rem;
+    font-size: 0.82rem;
+  }
 }
 
 .brand {
@@ -194,16 +223,32 @@ a:hover {
 /* Type */
 
 .hero-stage {
-  padding-block: clamp(1.6rem, 5vw, 3.4rem) 0.4rem;
+  padding-block: clamp(2rem, 7vw, 4.5rem) 0.4rem;
 }
 
 .hero {
-  padding-block: clamp(1.6rem, 5vw, 3.4rem) 0.4rem;
+  padding-block: clamp(2rem, 7vw, 4.5rem) 0.4rem;
 }
 
 .hero-stage .hero {
   padding-block: 0;
-  max-width: 52rem;
+}
+
+@media (min-width: 960px) {
+  .hero--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.25fr) minmax(16rem, 0.75fr);
+    gap: 3rem;
+    align-items: end;
+  }
+
+  .hero--split .lede {
+    margin-bottom: 1.1rem;
+  }
+
+  .hero--split .cta-row {
+    margin-top: 0;
+  }
 }
 
 .kicker {
@@ -259,9 +304,20 @@ h1 {
 h2 {
   margin: 0 0 0.55rem;
   font-family: var(--display);
-  font-size: clamp(1.7rem, 4vw, 2.5rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-size: clamp(1.9rem, 4.4vw, 3.1rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+}
+
+.section-head {
+  max-width: 38rem;
+  margin: 0 auto 1.6rem;
+  text-align: center;
+}
+
+.section-head .price-lede,
+.section-head p {
+  margin-inline: auto;
 }
 
 h3 {
@@ -280,7 +336,7 @@ p:last-child {
 }
 
 .section {
-  padding-block: clamp(2rem, 6vw, 4rem);
+  padding-block: clamp(2.4rem, 7vw, 5rem);
 }
 
 .section-intro {
@@ -363,20 +419,25 @@ p:last-child {
   color: var(--ink);
 }
 
+.hero-visual > .lede {
+  max-width: 36rem;
+  margin-bottom: 0;
+}
+
 .product-hud .hero-frame {
   margin-top: 0;
 }
 
 .hero-frame {
-  margin-top: 1.6rem;
-  padding: 1rem 0.85rem 1.1rem;
-  border-radius: 1.75rem;
+  margin-top: 2rem;
+  padding: 1.15rem 0.9rem 1.25rem;
+  border-radius: 2.5rem;
   background:
-    radial-gradient(ellipse at 8% 40%, rgba(255, 90, 122, 0.28), transparent 46%),
-    radial-gradient(ellipse at 95% 60%, rgba(62, 203, 255, 0.24), transparent 48%),
-    #0a0a0e;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+    radial-gradient(ellipse at 0% 45%, rgba(255, 90, 122, 0.38), transparent 48%),
+    radial-gradient(ellipse at 100% 55%, rgba(62, 203, 255, 0.32), transparent 50%),
+    #08080c;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.5);
 }
 
 .hero-frame .section-intro {
@@ -385,7 +446,7 @@ p:last-child {
 
 @media (min-width: 800px) {
   .hero-frame {
-    padding: 1.5rem 1.5rem 1.4rem;
+    padding: 2rem 2rem 1.8rem;
   }
 }
 
