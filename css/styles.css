@@ -166,8 +166,8 @@ a:hover {
 }
 
 .brand {
-  display: grid;
-  gap: 0.08rem;
+  display: flex;
+  align-items: center;
   text-decoration: none;
   color: inherit;
 }
@@ -176,16 +176,16 @@ a:hover {
   color: inherit;
 }
 
-.brand-name {
-  font-family: var(--display);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+.brand-logo {
+  display: block;
+  height: 36px;
+  width: auto;
 }
 
-.brand-place {
-  color: var(--mute);
-  font-size: 0.72rem;
+@media (min-width: 880px) {
+  .brand-logo {
+    height: 48px;
+  }
 }
 
 .nav {
@@ -539,6 +539,7 @@ p:last-child {
 }
 
 .mod-led {
+  grid-row: 1 / 4;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
@@ -591,6 +592,16 @@ p:last-child {
   border-color: rgba(255, 90, 122, 0.35);
 }
 
+.mod--coord {
+  background: rgba(62, 203, 255, 0.08);
+  border-color: rgba(62, 203, 255, 0.38);
+}
+
+.mod--coord .mod-led {
+  background: var(--cool);
+  box-shadow: 0 0 10px rgba(62, 203, 255, 0.7);
+}
+
 @media (min-width: 800px) {
   .org-grid {
     justify-items: center;
@@ -610,6 +621,10 @@ p:last-child {
     grid-template-columns: repeat(3, 1fr);
   }
 
+  .org-specialists--five {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .mod {
     width: 100%;
   }
@@ -618,6 +633,17 @@ p:last-child {
     display: block;
     color: var(--mute);
     font-size: 0.76rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .org-specialists--five {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .org-slot--dept,
+  .dept-chassis {
+    width: min(100%, 64rem);
   }
 }
 
@@ -782,6 +808,140 @@ p:last-child {
   font-weight: 750;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.seat-kicker {
+  margin: 2rem 0 0;
+}
+
+.seat-grid {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.seat-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.15rem 1.1rem 1.2rem;
+  background: #121216;
+  border: 1px solid var(--line);
+  border-radius: 1.35rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.seat-card.is-live {
+  border-color: rgba(62, 203, 255, 0.45);
+  box-shadow: 0 0 28px rgba(62, 203, 255, 0.12);
+}
+
+.seat-card--owner {
+  background: linear-gradient(180deg, rgba(255, 90, 122, 0.12), #121216 58%);
+  border-color: rgba(255, 90, 122, 0.32);
+}
+
+.seat-card--coord {
+  background: linear-gradient(180deg, rgba(62, 203, 255, 0.12), #121216 58%);
+  border-color: rgba(62, 203, 255, 0.32);
+}
+
+.seat-card--manager {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+.seat-head {
+  margin-bottom: 0.85rem;
+}
+
+.seat-name {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 1.45rem;
+  font-weight: 750;
+}
+
+.seat-role {
+  margin: 0 0 0.2rem;
+  color: var(--cool);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.seat-card--owner .seat-role {
+  color: var(--warm);
+}
+
+.seat-facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.seat-facts div {
+  margin: 0;
+}
+
+.seat-facts dt,
+.field-label {
+  margin: 0 0 0.3rem;
+  color: var(--mute);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.seat-facts dd {
+  margin: 0;
+  color: var(--ink-dim);
+}
+
+.seat-facts .chips {
+  margin-top: 0;
+}
+
+.seat-never {
+  margin-top: 0.15rem;
+  padding: 0.75rem 0.8rem;
+  border-radius: 1rem;
+  background: rgba(255, 90, 122, 0.08);
+  border: 1px solid rgba(255, 90, 122, 0.28);
+}
+
+.seat-never dt {
+  color: var(--warm);
+}
+
+.seat-never dd {
+  color: var(--ink-dim);
+}
+
+@media (min-width: 800px) {
+  .seat-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .seat-card--lead {
+    grid-column: 1 / -1;
+  }
+
+  .seat-card--lead .seat-facts {
+    grid-template-columns: 1.2fr 0.9fr 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1100px) {
+  .seat-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .seat-card--lead {
+    grid-column: 1 / -1;
+  }
 }
 
 .price-k {

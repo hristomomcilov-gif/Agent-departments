@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#050506" />
-    <title>Marketing department — Chris Momchilov</title>
+    <title>Marketing department — Teamulate</title>
     <meta
       name="description"
-      content="A marketing department of AI agents: coordinator above, manager who assigns, designer, social, and paid ads. We work. You steer."
+      content="Marketing is the first department we emulate. Coordinator above, named seats below. We work. You steer."
     />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/teamulate-mark.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/teamulate-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,8 +25,7 @@
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="index.html">
-          <span class="brand-name">Chris Momchilov</span>
-          <span class="brand-place">Barrie, Ontario</span>
+          <img class="brand-logo" src="assets/teamulate-logo.png" alt="Teamulate" />
         </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html">Home</a>
@@ -39,168 +39,277 @@
 
     <main id="main">
       <header class="hero wrap">
-        <p class="kicker">The product</p>
-        <h1>A marketing <span class="grad-warm">department</span>, not a pile of <span class="grad-cool">prompts</span></h1>
+        <p class="kicker">A sample department</p>
+        <h1>
+          Marketing first. Not the <span class="grad-warm">only</span>
+          <span class="grad-cool">department</span>.
+        </h1>
         <p class="lede">
-          Tap a seat. The coordinator sits above the department. The manager assigns. The
-          specialists make the work. We work. You steer.
+          This is the first department we emulate. Sales, accounting, and the rest can come later.
+          Tap a seat. Helms sits above the department. We work. You steer.
         </p>
       </header>
 
       <section class="section wrap" aria-labelledby="chart-heading">
-        <h2 id="chart-heading" class="visually-hidden">Clickable hierarchy</h2>
-        <div class="product-hud">
-          <div class="hero-frame">
-        <figure class="org-block">
+        <h2 id="chart-heading" class="visually-hidden">Clickable marketing hierarchy</h2>
+        <div class="hero-frame">
+          <figure class="org-block">
             <figcaption class="visually-hidden">
-              Clickable org chart. Coordinator above the marketing department. Marketing manager
-              over designer, social, and paid ads.
+              You keep the wheel. Helms the coordinator sits above the department. Marlow assigns.
+              Pico, Pulse, Bid, Quill, and Drip make the work.
             </figcaption>
-            <div class="org-hud" data-org aria-label="Marketing department hierarchy">
+            <div class="org-hud" data-org aria-label="Sample marketing department">
               <svg class="org-wires" aria-hidden="true"></svg>
               <div class="org-grid">
                 <div class="org-slot">
-                  <a class="mod mod--coord" href="#coordinator" data-id="coordinator" data-agent="coordinator">
+                  <a class="mod mod--owner" href="#you" data-id="you" data-agent="you">
                     <span class="mod-led" aria-hidden="true"></span>
-                    <span class="mod-k">Above department</span>
-                    <span class="mod-name">Coordinator</span>
-                    <span class="mod-note">Holds the queue</span>
+                    <span class="mod-k">Owner</span>
+                    <span class="mod-name">You</span>
+                    <span class="mod-note">You keep the wheel</span>
+                  </a>
+                </div>
+                <div class="org-slot">
+                  <a class="mod mod--coord" href="#helms" data-id="helms" data-parent="you" data-agent="helms">
+                    <span class="mod-led" aria-hidden="true"></span>
+                    <span class="mod-k">Coordinator</span>
+                    <span class="mod-name">Helms</span>
+                    <span class="mod-note">Above the department</span>
                   </a>
                 </div>
                 <div class="org-slot org-slot--dept">
                   <div class="dept-chassis">
-                    <p class="dept-tag">Mkt · department</p>
-                    <a class="mod" href="#manager" data-id="manager" data-parent="coordinator" data-agent="manager">
+                    <p class="dept-tag">Sample · marketing</p>
+                    <a class="mod" href="#marlow" data-id="marlow" data-parent="helms" data-agent="marlow">
                       <span class="mod-led" aria-hidden="true"></span>
-                      <span class="mod-k">Pipeline</span>
-                      <span class="mod-name">Marketing Manager</span>
-                      <span class="mod-note">Does not touch Canva</span>
+                      <span class="mod-k">Marketing Manager</span>
+                      <span class="mod-name">Marlow</span>
+                      <span class="mod-note">Assigns. Does not open Canva.</span>
                     </a>
-                    <div class="org-specialists">
-                      <a class="mod" href="#designer" data-id="designer" data-parent="manager" data-agent="designer">
+                    <div class="org-specialists org-specialists--five">
+                      <a class="mod" href="#pico" data-id="pico" data-parent="marlow" data-agent="pico">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">Canva</span>
-                        <span class="mod-name">Designer</span>
+                        <span class="mod-k">Designer</span>
+                        <span class="mod-name">Pico</span>
+                        <span class="mod-note">Canva. Never posts.</span>
                       </a>
-                      <a class="mod" href="#social" data-id="social" data-parent="manager" data-agent="social">
+                      <a class="mod" href="#pulse" data-id="pulse" data-parent="marlow" data-agent="pulse">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">IG · LinkedIn</span>
-                        <span class="mod-name">Social</span>
+                        <span class="mod-k">Social</span>
+                        <span class="mod-name">Pulse</span>
+                        <span class="mod-note">Drafts. Never publishes.</span>
                       </a>
-                      <a class="mod" href="#ads" data-id="ads" data-parent="manager" data-agent="ads">
+                      <a class="mod" href="#bid" data-id="bid" data-parent="marlow" data-agent="bid">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">Google · Meta</span>
-                        <span class="mod-name">Paid ads</span>
+                        <span class="mod-k">Paid ads</span>
+                        <span class="mod-name">Bid</span>
+                        <span class="mod-note">Builds. Never spends.</span>
+                      </a>
+                      <a class="mod" href="#quill" data-id="quill" data-parent="marlow" data-agent="quill">
+                        <span class="mod-led" aria-hidden="true"></span>
+                        <span class="mod-k">Copywriter</span>
+                        <span class="mod-name">Quill</span>
+                        <span class="mod-note">Pages. Never publishes.</span>
+                      </a>
+                      <a class="mod" href="#drip" data-id="drip" data-parent="marlow" data-agent="drip">
+                        <span class="mod-led" aria-hidden="true"></span>
+                        <span class="mod-k">Email</span>
+                        <span class="mod-name">Drip</span>
+                        <span class="mod-note">Sequences. Never sends.</span>
                       </a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <p class="org-caption">Select a module. You sit above all of this.</p>
           </figure>
-          </div>
+        </div>
 
-          <div class="module-bay" aria-live="polite">
-            <article class="rack-module is-live" id="coordinator" data-card="coordinator">
-              <p class="agent-meta">Seat · above the department</p>
-              <h3>Coordinator</h3>
-              <div class="work">
-                <p>
-                  Holds the queue. Sees when a draft is stuck. Escalates to you when a human has to
-                  decide.
-                </p>
-                <p>Keeps the manager honest about what is waiting. Does not live inside marketing.</p>
-                <p>Moves work across the week so the department is not a pile of open tabs.</p>
+        <p class="kicker seat-kicker">Example marketing seats — not the job-hunt crew</p>
+        <div class="seat-grid">
+          <article class="seat-card seat-card--lead seat-card--owner" id="you" data-card="you">
+            <header class="seat-head">
+              <p class="seat-role">Owner</p>
+              <h3 class="seat-name">You</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>You keep the wheel. Direction, passwords, and money stay here.</dd>
               </div>
-              <p class="field-label">Tools</p>
-              <ul class="chips">
-                <li>Shared board</li>
-                <li>Drafts</li>
-                <li>Approvals</li>
-              </ul>
-              <p class="never">
-                <strong>Never</strong>
-                <span>Does not write the posts, design the pages, or spend the ad budget.</span>
-              </p>
-            </article>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Approvals</li><li>Payments</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>You do not sit in the specialist seats.</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="rack-module" id="manager" data-card="manager" hidden>
-              <p class="agent-meta">Seat · inside the department</p>
-              <h3>Marketing Manager</h3>
-              <div class="work">
-                <p>Watches the pipeline. Knows what is in draft, what is blocked, and what is next.</p>
-                <p>Assigns work to Designer, Social, and Paid ads so the pieces fit.</p>
-                <p>Reads the output. Hands it up. Does not do the specialists’ jobs for them.</p>
+          <article class="seat-card seat-card--lead seat-card--coord" id="helms" data-card="helms">
+            <header class="seat-head">
+              <p class="seat-role">Coordinator · above the department</p>
+              <h3 class="seat-name">Helms</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Holds the queue. Sees when a draft is stuck. Escalates when you have to steer.</dd>
               </div>
-              <p class="field-label">Tools</p>
-              <ul class="chips">
-                <li>Board</li>
-                <li>Briefs</li>
-                <li>Calendar</li>
-              </ul>
-              <p class="never">
-                <strong>Never</strong>
-                <span>Does not open Canva. Does not post. Does not buy the ads.</span>
-              </p>
-            </article>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Shared board</li><li>Drafts</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never sends. Never writes the work. Never publishes. Never spends.</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="rack-module" id="designer" data-card="designer" hidden>
-              <p class="agent-meta">Seat · reports to the manager</p>
-              <h3>Designer</h3>
-              <div class="work">
-                <p>Turns a brief into a page, a graphic, a layout.</p>
-                <p>Keeps the look consistent from one piece to the next.</p>
-                <p>Hands the draft back up. Waits.</p>
+          <article class="seat-card seat-card--lead seat-card--manager" id="marlow" data-card="marlow">
+            <header class="seat-head">
+              <p class="seat-role">Marketing Manager</p>
+              <h3 class="seat-name">Marlow</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Watches the pipeline. Assigns work to Pico, Pulse, Bid, Quill, and Drip so the pieces fit.</dd>
               </div>
-              <p class="field-label">Tools</p>
-              <ul class="chips">
-                <li>Canva</li>
-              </ul>
-              <p class="never">
-                <strong>Never</strong>
-                <span>Does not publish, and does not touch the ad accounts.</span>
-              </p>
-            </article>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Board</li><li>Briefs</li><li>Calendar</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Does not open Canva. Does not post. Does not buy the ads.</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="rack-module" id="social" data-card="social" hidden>
-              <p class="agent-meta">Seat · reports to the manager</p>
-              <h3>Social</h3>
-              <div class="work">
-                <p>Drafts Instagram and LinkedIn from the calendar.</p>
-                <p>Builds a week of posts so you are not writing from a blank box.</p>
-                <p>Queues. Does not fire.</p>
+          <article class="seat-card" id="pico" data-card="pico">
+            <header class="seat-head">
+              <p class="seat-role">Designer</p>
+              <h3 class="seat-name">Pico</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Turns a brief into a page, a graphic, a layout. Hands the draft back up.</dd>
               </div>
-              <p class="field-label">Tools</p>
-              <ul class="chips">
-                <li>Instagram</li>
-                <li>LinkedIn</li>
-              </ul>
-              <p class="never">
-                <strong>Never</strong>
-                <span>Does not hit publish, and does not change brand passwords.</span>
-              </p>
-            </article>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Canva</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never posts. Never spends.</dd>
+              </div>
+            </dl>
+          </article>
 
-            <article class="rack-module" id="ads" data-card="ads" hidden>
-              <p class="agent-meta">Seat · reports to the manager</p>
-              <h3>Paid ads</h3>
-              <div class="work">
-                <p>Builds campaign structure in Google Ads and Meta.</p>
-                <p>Writes the variants. Marks what is ready for your eye.</p>
-                <p>Flags spend questions instead of guessing.</p>
+          <article class="seat-card" id="pulse" data-card="pulse">
+            <header class="seat-head">
+              <p class="seat-role">Social</p>
+              <h3 class="seat-name">Pulse</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Drafts Instagram and LinkedIn from the calendar. Builds a week. Queues. Does not fire.</dd>
               </div>
-              <p class="field-label">Tools</p>
-              <ul class="chips">
-                <li>Google Ads</li>
-                <li>Meta</li>
-              </ul>
-              <p class="never">
-                <strong>Never</strong>
-                <span>Does not set a payment method or raise a budget without you.</span>
-              </p>
-            </article>
-          </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Instagram</li><li>LinkedIn</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never publishes. Never changes brand passwords.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="seat-card" id="bid" data-card="bid">
+            <header class="seat-head">
+              <p class="seat-role">Paid ads</p>
+              <h3 class="seat-name">Bid</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Builds campaign structure in Google Ads and Meta. Writes variants. Flags spend questions.</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Google Ads</li><li>Meta</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never spends without you.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="seat-card" id="quill" data-card="quill">
+            <header class="seat-head">
+              <p class="seat-role">Copywriter</p>
+              <h3 class="seat-name">Quill</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Landing copy, ads, pages. Keeps the voice consistent. Hands drafts up.</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>Docs</li><li>Briefs</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never publishes.</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article class="seat-card" id="drip" data-card="drip">
+            <header class="seat-head">
+              <p class="seat-role">Email</p>
+              <h3 class="seat-name">Drip</h3>
+            </header>
+            <dl class="seat-facts">
+              <div>
+                <dt>Does</dt>
+                <dd>Sequences and drafts in HubSpot, Klaviyo, or Mailchimp. The list waits on you.</dd>
+              </div>
+              <div>
+                <dt>Tools</dt>
+                <dd>
+                  <ul class="chips"><li>HubSpot</li><li>Klaviyo</li><li>Mailchimp</li></ul>
+                </dd>
+              </div>
+              <div class="seat-never">
+                <dt>Never</dt>
+                <dd>Never sends the list.</dd>
+              </div>
+            </dl>
+          </article>
         </div>
 
         <div class="cta-row">

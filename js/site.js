@@ -126,16 +126,12 @@
     cards.forEach(function (card) {
       var match = card.getAttribute("data-card") === id;
       card.classList.toggle("is-live", match);
-      if (match) {
-        card.removeAttribute("hidden");
-        if (move) {
-          card.scrollIntoView({
-            behavior: reduce ? "auto" : "smooth",
-            block: "nearest",
-          });
-        }
-      } else {
-        card.setAttribute("hidden", "");
+      card.removeAttribute("hidden");
+      if (match && move) {
+        card.scrollIntoView({
+          behavior: reduce ? "auto" : "smooth",
+          block: "nearest",
+        });
       }
     });
   }
@@ -151,10 +147,10 @@
     });
   });
 
-  var start = window.location.hash ? window.location.hash.slice(1) : "coordinator";
+  var start = window.location.hash ? window.location.hash.slice(1) : "helms";
   activate(start, Boolean(window.location.hash));
 
   window.addEventListener("hashchange", function () {
-    activate(window.location.hash.slice(1) || "coordinator", true);
+    activate(window.location.hash.slice(1) || "helms", true);
   });
 })();

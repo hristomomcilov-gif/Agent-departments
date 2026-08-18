@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#050506" />
-    <title>Chris Momchilov — departments of AI agents</title>
+    <title>Teamulate — we emulate departments</title>
     <meta
       name="description"
       content="We emulate business departments with AI agents. We work. You steer."
     />
-    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/teamulate-mark.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/teamulate-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,8 +25,7 @@
     <header class="site-header">
       <div class="wrap">
         <a class="brand" href="index.html">
-          <span class="brand-name">Chris Momchilov</span>
-          <span class="brand-place">Barrie, Ontario</span>
+          <img class="brand-logo" src="assets/teamulate-logo.png" alt="Teamulate" />
         </a>
         <nav class="nav" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
@@ -54,23 +54,23 @@
               stay with you.
             </p>
             <div class="cta-row">
-              <a class="btn" href="#pricing">See example pricing</a>
+              <a class="btn" href="#pricing">See pricing</a>
               <a class="btn btn--ghost" href="marketing.html">Open the department</a>
             </div>
           </div>
         </header>
 
         <section class="hero-visual" aria-labelledby="org-heading">
-          <p class="kicker" id="org-heading">The skeleton</p>
+          <p class="kicker" id="org-heading">A sample department</p>
           <p class="lede">
-            Not the whole company. Marketing, as it actually sits: you, a coordinator, a manager,
-            then the people who make the work.
+            Marketing is the first department we emulate — not the only one. Sales and accounting
+            can come later. You keep the wheel. Helms sits above the department.
           </p>
           <div class="hero-frame">
           <figure class="org-block">
             <figcaption class="visually-hidden">
-              Org skeleton: you, the owner, above a coordinator, above a marketing manager, above
-              designer, social, and paid ads.
+              Sample marketing org: you, the owner, above Helms the coordinator, above Marlow the
+              marketing manager, above Pico, Pulse, Bid, Quill, and Drip.
             </figcaption>
             <div class="org-hud" data-org>
               <svg class="org-wires" aria-hidden="true"></svg>
@@ -84,42 +84,57 @@
                   </a>
                 </div>
                 <div class="org-slot">
-                  <a
+                    <a
                     class="mod mod--coord"
-                    data-id="coordinator"
+                    data-id="helms"
                     data-parent="you"
-                    href="marketing.html#coordinator"
+                    href="marketing.html#helms"
                   >
                     <span class="mod-led" aria-hidden="true"></span>
-                    <span class="mod-k">Above department</span>
-                    <span class="mod-name">Coordinator</span>
-                    <span class="mod-note">Holds the queue</span>
+                    <span class="mod-k">Coordinator</span>
+                    <span class="mod-name">Helms</span>
+                    <span class="mod-note">Above the department</span>
                   </a>
                 </div>
                 <div class="org-slot org-slot--dept">
                   <div class="dept-chassis">
-                    <p class="dept-tag">Mkt · department</p>
-                    <a class="mod" data-id="manager" data-parent="coordinator" href="marketing.html#manager">
+                    <p class="dept-tag">Sample · marketing</p>
+                    <a class="mod" data-id="marlow" data-parent="helms" href="marketing.html#marlow">
                       <span class="mod-led" aria-hidden="true"></span>
-                      <span class="mod-k">Assigns</span>
-                      <span class="mod-name">Marketing Manager</span>
-                      <span class="mod-note">Does not open Canva</span>
+                      <span class="mod-k">Marketing Manager</span>
+                      <span class="mod-name">Marlow</span>
+                      <span class="mod-note">Assigns. Does not open Canva.</span>
                     </a>
-                    <div class="org-specialists">
-                      <a class="mod" data-id="designer" data-parent="manager" href="marketing.html#designer">
+                    <div class="org-specialists org-specialists--five">
+                      <a class="mod" data-id="pico" data-parent="marlow" href="marketing.html#pico">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">Canva</span>
-                        <span class="mod-name">Designer</span>
+                        <span class="mod-k">Designer</span>
+                        <span class="mod-name">Pico</span>
+                        <span class="mod-note">Canva. Never posts.</span>
                       </a>
-                      <a class="mod" data-id="social" data-parent="manager" href="marketing.html#social">
+                      <a class="mod" data-id="pulse" data-parent="marlow" href="marketing.html#pulse">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">IG · LinkedIn</span>
-                        <span class="mod-name">Social</span>
+                        <span class="mod-k">Social</span>
+                        <span class="mod-name">Pulse</span>
+                        <span class="mod-note">Drafts. Never publishes.</span>
                       </a>
-                      <a class="mod" data-id="ads" data-parent="manager" href="marketing.html#ads">
+                      <a class="mod" data-id="bid" data-parent="marlow" href="marketing.html#bid">
                         <span class="mod-led" aria-hidden="true"></span>
-                        <span class="mod-k">Google · Meta</span>
-                        <span class="mod-name">Paid ads</span>
+                        <span class="mod-k">Paid ads</span>
+                        <span class="mod-name">Bid</span>
+                        <span class="mod-note">Builds. Never spends.</span>
+                      </a>
+                      <a class="mod" data-id="quill" data-parent="marlow" href="marketing.html#quill">
+                        <span class="mod-led" aria-hidden="true"></span>
+                        <span class="mod-k">Copy</span>
+                        <span class="mod-name">Quill</span>
+                        <span class="mod-note">Pages. Never publishes.</span>
+                      </a>
+                      <a class="mod" data-id="drip" data-parent="marlow" href="marketing.html#drip">
+                        <span class="mod-led" aria-hidden="true"></span>
+                        <span class="mod-k">Email</span>
+                        <span class="mod-name">Drip</span>
+                        <span class="mod-note">Sequences. Never sends.</span>
                       </a>
                     </div>
                   </div>
@@ -141,13 +156,13 @@
           </li>
           <li>
             <span class="stat-n">5</span>
-            <span class="stat-k">Agents on his crew</span>
+            <span class="stat-k">Agents on the crew</span>
             <span class="stat-d">Skipper, Scout, Screen, Taylor, Clerk. Already on the crew.</span>
           </li>
           <li>
             <span class="stat-n">1</span>
-            <span class="stat-k">Department first</span>
-            <span class="stat-d">Marketing is productized. Sales and accounting come later.</span>
+            <span class="stat-k">Department productized</span>
+            <span class="stat-d">Marketing is the sample department. Sales and accounting come later.</span>
           </li>
           <li>
             <span class="stat-n stat-n--wide">$200k+</span>
@@ -194,10 +209,10 @@
       <section class="section section--price" id="pricing" aria-labelledby="price-heading">
         <div class="wrap">
           <div class="section-head">
-          <p class="kicker">Example · starting point · not a checkout</p>
+          <p class="kicker">Pricing</p>
           <h2 id="price-heading">What a shop is <span class="grad-cool">looking at</span></h2>
           <p class="price-lede">
-            So you can feel the scale. Final quote after the first week.
+            These are the prices. Scope is confirmed in week one. You still pay your own tool seats.
           </p>
           </div>
 
@@ -213,21 +228,21 @@
             </article>
 
             <article class="price-card price-card--featured">
-              <p class="price-badge">Example</p>
-              <p class="price-k">One department</p>
+              <p class="price-badge">One department</p>
+              <p class="price-k">Marketing first</p>
               <p class="price-n"><abbr title="Canadian dollars">CAD</abbr> $1,500</p>
               <p class="price-per">/ month</p>
               <ul>
-                <li>Marketing first: manager, designer, social, paid ads.</li>
-                <li>Coordinator above. We work. You steer.</li>
+                <li>One department: coordinator, manager, designer, social, ads, copy, email.</li>
+                <li>Helms sits above. We work. You steer.</li>
               </ul>
               <a class="btn" href="mailto:christo.momchilov@gmail.com">Ask for a quote</a>
             </article>
 
             <article class="price-card">
-              <p class="price-k">Next department</p>
+              <p class="price-k">Extra department later</p>
               <p class="price-n"><abbr title="Canadian dollars">CAD</abbr> +$800</p>
-              <p class="price-per">/ month later</p>
+              <p class="price-per">/ month</p>
               <ul>
                 <li>Sales or accounting when you want them. Not built as pages yet.</li>
                 <li>Same rule: you keep the wheel.</li>
@@ -236,8 +251,8 @@
           </div>
 
           <p class="price-note">
-            You still pay your own tool seats — Canva, ads, the rest. This is an example so a shop
-            can feel the scale. Final quote after the first week.
+            You still pay your own tool seats — Canva, ads, email, the rest. We do not take a cut
+            of spend. Scope is confirmed in week one.
           </p>
         </div>
       </section>
