@@ -92,4 +92,12 @@
       window.location.href = "thank-you.html";
     });
   }
+
+  var login = document.querySelector("[data-login-form]");
+  if (login) {
+    login.addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "dashboard.html";
+    });
+  }
 })();

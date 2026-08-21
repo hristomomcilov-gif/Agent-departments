@@ -3,6 +3,8 @@ Allow: /
 Disallow: /pricing.html
 Disallow: /pricing
 Disallow: /thank-you.html
+Disallow: /dashboard.html
+Disallow: /login.html
 Disallow: /jeff-mackie
 Disallow: /jeff-mackie/
 Disallow: /walkers-electric
