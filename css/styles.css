@@ -756,13 +756,14 @@ p:last-child {
   }
 
   .steps li:not(:last-child)::after {
-    content: "";
+    content: "›";
     position: absolute;
-    top: 2.1rem;
-    right: -0.4rem;
-    width: 0.45rem;
-    height: 0;
-    border-top: 2px dashed #d4d7e5;
+    top: 1.45rem;
+    right: -0.42rem;
+    z-index: 1;
+    color: #c5c8d8;
+    font-size: 1.15rem;
+    line-height: 1;
   }
 }
 
@@ -1137,7 +1138,7 @@ p:last-child {
 }
 
 .price-card .btn {
-  margin-top: 1.15rem;
+  margin-top: auto;
 }
 
 .price-note,
