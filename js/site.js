@@ -1,156 +1,62 @@
 (function () {
-  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var root = document.documentElement;
+  var header = document.querySelector(".site-header");
+  var toggle = document.querySelector(".nav-toggle");
+  var themeBtn = document.querySelector(".theme-toggle");
+  var stored = null;
 
-  function glowMarkup() {
-    return (
-      "<defs>" +
-      '<linearGradient id="wire-grad" x1="0" y1="0" x2="0" y2="1">' +
-      '<stop offset="0%" stop-color="#ff5a7a"/>' +
-      '<stop offset="100%" stop-color="#3ecbff"/>' +
-      "</linearGradient>" +
-      '<filter id="wire-glow" x="-20%" y="-20%" width="140%" height="140%">' +
-      '<feGaussianBlur stdDeviation="2.2" result="b"/>' +
-      '<feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>' +
-      "</filter></defs>"
-    );
+  try {
+    stored = window.localStorage.getItem("teamulate-theme");
+  } catch (err) {
+    stored = null;
   }
 
-  function point(el, rootBox, edge) {
-    var box = el.getBoundingClientRect();
-    return {
-      x: box.left + box.width / 2 - rootBox.left,
-      y: edge === "bottom" ? box.bottom - rootBox.top : box.top - rootBox.top,
-    };
-  }
-
-  function wire(root, animate) {
-    var svg = root.querySelector(".org-wires");
-    if (!svg) {
-      return;
-    }
-
-    var rootBox = root.getBoundingClientRect();
-    var width = root.clientWidth;
-    var height = root.clientHeight;
-    if (width < 2 || height < 2) {
-      return;
-    }
-    svg.setAttribute("viewBox", "0 0 " + width + " " + height);
-
-    var paths = [];
-    root.querySelectorAll("[data-parent]").forEach(function (child) {
-      var parent = root.querySelector('[data-id="' + child.getAttribute("data-parent") + '"]');
-      if (!parent) {
-        return;
-      }
-      var a = point(parent, rootBox, "bottom");
-      var b = point(child, rootBox, "top");
-      var mid = (a.y + b.y) / 2;
-      paths.push(
-        "M " +
-          a.x.toFixed(1) +
-          " " +
-          a.y.toFixed(1) +
-          " V " +
-          mid.toFixed(1) +
-          " H " +
-          b.x.toFixed(1) +
-          " V " +
-          b.y.toFixed(1)
-      );
-    });
-
-    svg.innerHTML =
-      glowMarkup() +
-      paths
-        .map(function (d, i) {
-          var cls = animate && !reduce ? ' class="is-draw" style="animation-delay:' + i * 0.08 + 's"' : "";
-          return '<path pathLength="1" d="' + d + '"' + cls + "></path>";
-        })
-        .join("");
-  }
-
-  document.querySelectorAll("[data-org]").forEach(function (root) {
-    var first = true;
-    var lastKey = "";
-    var timer;
-    var draw = function () {
-      var key = root.clientWidth + "x" + root.clientHeight;
-      if (key === lastKey) {
-        return;
-      }
-      lastKey = key;
-      wire(root, first);
-      first = false;
-    };
-    var schedule = function () {
-      window.clearTimeout(timer);
-      timer = window.setTimeout(draw, 40);
-    };
-    draw();
-    if (window.ResizeObserver) {
-      var ro = new ResizeObserver(schedule);
-      ro.observe(root);
+  function applyTheme(theme) {
+    if (theme === "dark") {
+      root.setAttribute("data-theme", "dark");
     } else {
-      window.addEventListener("resize", schedule);
+      root.removeAttribute("data-theme");
     }
-    window.addEventListener("load", schedule);
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(schedule);
+    if (themeBtn) {
+      themeBtn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+      themeBtn.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to light theme" : "Switch to dark theme"
+      );
     }
-  });
-
-  var cards = document.querySelectorAll("[data-card]");
-  var nodes = document.querySelectorAll("[data-agent]");
-  if (!cards.length || !nodes.length) {
-    return;
   }
 
-  function activate(id, move) {
-    if (!id) {
-      return;
-    }
+  if (stored === "dark" || stored === "light") {
+    applyTheme(stored);
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    applyTheme("dark");
+  } else {
+    applyTheme("light");
+  }
 
-    var found = false;
-    nodes.forEach(function (node) {
-      var on = node.getAttribute("data-agent") === id;
-      node.classList.toggle("is-active", on);
-      if (on) {
-        found = true;
-      }
-    });
-    if (!found) {
-      return;
-    }
-
-    cards.forEach(function (card) {
-      var match = card.getAttribute("data-card") === id;
-      card.classList.toggle("is-live", match);
-      card.removeAttribute("hidden");
-      if (match && move) {
-        card.scrollIntoView({
-          behavior: reduce ? "auto" : "smooth",
-          block: "nearest",
-        });
+  if (themeBtn) {
+    themeBtn.addEventListener("click", function () {
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+      applyTheme(next);
+      try {
+        window.localStorage.setItem("teamulate-theme", next);
+      } catch (err) {
+        /* ignore */
       }
     });
   }
 
-  nodes.forEach(function (node) {
-    node.addEventListener("click", function (event) {
-      event.preventDefault();
-      var id = node.getAttribute("data-agent");
-      if (history.replaceState) {
-        history.replaceState(null, "", "#" + id);
-      }
-      activate(id, true);
+  if (header && toggle) {
+    toggle.addEventListener("click", function () {
+      var open = header.classList.toggle("is-open");
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
     });
-  });
 
-  var start = window.location.hash ? window.location.hash.slice(1) : "helms";
-  activate(start, Boolean(window.location.hash));
-
-  window.addEventListener("hashchange", function () {
-    activate(window.location.hash.slice(1) || "helms", true);
-  });
+    header.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        header.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
 })();
