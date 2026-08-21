@@ -25,10 +25,7 @@
     <link rel="apple-touch-icon" href="assets/teamulate-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -42,14 +39,20 @@
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a href="#product">Product</a>
           <a href="how-it-works.html">How It Works</a>
-          <a href="marketing.html">AI Team</a>
+          <a href="marketing.html">Team</a>
+          <a href="dashboard.html">Dashboard</a>
           <a href="workflows.html">Workflows</a>
-          <a href="research.html">Research</a>
-          <a href="about.html">About</a>
+          <a href="research.html">Resources</a>
         </nav>
         <div class="header-tools">
+          <span class="currency-chip" title="Local label only. No public price list.">
+            <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true">
+              <rect width="14" height="10" rx="1" fill="#ff0000"/>
+              <path d="M7 2.1l.45 1.3h1.35l-1.1.8.42 1.3L7 4.7 5.88 5.5l.42-1.3-1.1-.8h1.35z" fill="#fff"/>
+            </svg>
+            CAD
+          </span>
           <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
             <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" />
@@ -66,131 +69,170 @@
     </header>
 
     <main id="main">
-      <section class="wrap hero">
+      <section class="wrap hero hero--shot">
         <div>
           <p class="eyebrow">Autonomous marketing department for growing B2B companies.</p>
+          <p class="value-line">Teamulate · Your AI marketing team</p>
           <h1>A full marketing department. Without building one.</h1>
           <p class="lede">
-            One AI-operated department that researches, drafts, and ships the work. Autonomous
-            within your guardrails. Always-on monitoring and routine execution. Human-controlled
-            for the decisions that matter.
+            Your team does not need another tool. It needs the work to move — researched, drafted,
+            and queued in one view. Autonomous within your guardrails. Human-controlled for the
+            decisions that matter.
           </p>
+          <ul class="chip-row">
+            <li>
+              <span class="chip-ico" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><rect x="1" y="2" width="8" height="6" rx="1.2" stroke="currentColor" stroke-width="1.3"/></svg>
+              </span>
+              One dashboard
+            </li>
+            <li>
+              <span class="chip-ico" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5.2 4 7.2 8 2.8" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </span>
+              You approve
+            </li>
+            <li>
+              <span class="chip-ico" aria-hidden="true">
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5h6M5 2v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+              </span>
+              Guardrails
+            </li>
+          </ul>
           <div class="cta-row">
-            <a class="btn" href="demo.html">See the team in action</a>
-            <a class="btn btn--ghost" href="how-it-works.html">See how it works</a>
+            <a class="btn" href="demo.html">
+              See the team in action
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="how-it-works.html">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><circle cx="9" cy="9" r="8" stroke="currentColor" stroke-width="1.4"/><path d="M7.4 6.2 12 9 7.4 11.8z" fill="currentColor"/></svg>
+              See how it works
+            </a>
           </div>
           <p class="microcopy">
             Teamulate is building and marketing Teamulate with the same AI-operated system it
             offers to clients.
           </p>
         </div>
-        <div class="hero-visual">
-          <figure class="demo-frame">
-            <p class="demo-banner">Demo data — example layout, not live results</p>
-            <div class="demo-shell">
-              <aside class="demo-side" aria-hidden="true">
-                <span></span><span></span><span></span><span></span><span></span>
-              </aside>
-              <div class="demo-main">
-                <div class="demo-grid">
-                  <div class="demo-card">
-                    <strong>Work in view</strong>
-                    <span class="demo-empty"></span>
-                  </div>
-                  <div class="demo-card">
-                    <strong>Approvals</strong>
-                    <span class="demo-empty"></span>
-                  </div>
-                  <div class="demo-card demo-card--wide">
-                    <strong>The loop</strong>
-                    <div class="demo-chart" role="img" aria-label="Empty example chart grid"></div>
-                  </div>
+
+        <div class="product-stage" aria-label="Product mock. Demo data only.">
+          <svg class="orbit-lines" viewBox="0 0 640 420" aria-hidden="true">
+            <path d="M320 210 L70 40" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+            <path d="M320 210 L560 30" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+            <path d="M320 210 L40 190" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+            <path d="M320 210 L600 180" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+            <path d="M320 210 L90 380" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+            <path d="M320 210 L560 390" fill="none" stroke="#d7dbe8" stroke-width="1.4"/>
+          </svg>
+          <figure class="dash">
+            <aside class="dash-side" aria-hidden="true">
+              <span class="dash-mark"></span>
+              <button type="button" tabindex="-1"></button>
+              <button type="button" tabindex="-1"></button>
+              <button type="button" tabindex="-1"></button>
+              <button type="button" tabindex="-1"></button>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-top">
+                <span>Overview</span>
+                <span class="demo-tag">Demo data</span>
+              </div>
+              <div class="dash-kpis">
+                <div class="kpi"><span>Work in view</span><b>— —</b></div>
+                <div class="kpi"><span>Approvals</span><b>— —</b></div>
+                <div class="kpi"><span>Queued drafts</span><b>— —</b></div>
+              </div>
+              <div class="dash-chart">
+                <svg viewBox="0 0 320 110" role="img" aria-label="Example layout chart with no values">
+                  <path d="M8 86 C48 80 70 54 110 58 C150 62 170 30 210 36 C250 42 270 22 312 18" fill="none" stroke="#5a45ff" stroke-width="2.4" stroke-linecap="round"/>
+                  <path d="M8 92 C50 88 80 70 120 74 C160 78 190 50 230 56 C270 62 290 48 312 44" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+                </svg>
+              </div>
+              <div class="dash-split">
+                <div class="dash-list">
+                  <strong>Queued work</strong>
+                  <ul>
+                    <li>Page draft <em>waiting</em></li>
+                    <li>Social cut <em>waiting</em></li>
+                    <li>Outreach use <em>waiting</em></li>
+                  </ul>
+                </div>
+                <div class="dash-list">
+                  <strong>Recent activity</strong>
+                  <ul>
+                    <li>QA checked a brief <em>· ·</em></li>
+                    <li>Publish still gated <em>· ·</em></li>
+                    <li>Measure has no lift <em>· ·</em></li>
+                  </ul>
                 </div>
               </div>
             </div>
           </figure>
-          <p class="demo-caption">Product mock only. Empty placeholders. No invented pipeline.</p>
+          <div class="role-chips" aria-hidden="true">
+            <p class="role-chip rc1"><i style="background:#ea580c"></i>Paid Ads</p>
+            <p class="role-chip rc2"><i style="background:#2563eb"></i>Analytics</p>
+            <p class="role-chip rc3"><i style="background:#0891b2"></i>SEO</p>
+            <p class="role-chip rc4"><i style="background:#16a34a"></i>Content</p>
+            <p class="role-chip rc5"><i style="background:#db2777"></i>Social</p>
+            <p class="role-chip rc6"><i style="background:#d97706"></i>Email</p>
+          </div>
         </div>
       </section>
 
-      <section class="problem" id="product" aria-labelledby="problem-heading">
-        <div class="wrap">
-          <h2 id="problem-heading">Your team does not need another tool. It needs the work to move.</h2>
-          <p class="lede">
-            Tools sit still until someone runs them. Teamulate is the department: seats, a loop,
-            and a queue you can see — with you on spend, send, and publish.
-          </p>
-        </div>
-      </section>
-
-      <section class="section" aria-labelledby="benefits-heading">
+      <section class="section section--soft" id="how-it-works" aria-labelledby="hiw-heading">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">Why it exists</p>
-            <h2 id="benefits-heading">Capacity. Visibility. Control.</h2>
+            <p class="kicker">How it works</p>
+            <h2 id="hiw-heading">Learn through Improve</h2>
+            <p class="lede">Routine work stays in the rails. Spend, send, and publish wait for a human yes.</p>
           </div>
-          <div class="benefit-grid">
-            <article class="benefit-card">
-              <h3>The work moves</h3>
-              <p>
-                Research, pages, social, and outreach drafts keep landing in the queue. Always-on
-                monitoring and routine execution — not a blank page in the morning.
-              </p>
-            </article>
-            <article class="benefit-card">
-              <h3>One department you can see</h3>
-              <p>
-                A Head of Marketing above specialists, with Analytics and QA beside them. One
-                view of what is drafted, waiting, and approved.
-              </p>
-            </article>
-            <article class="benefit-card">
-              <h3>You keep the gates</h3>
-              <p>
-                Autonomous within your guardrails. Human-controlled for the decisions that
-                matter. You keep the passwords and the payments.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--soft" aria-labelledby="loop-heading">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Marketing loop</p>
-            <h2 id="loop-heading">Learn through Improve</h2>
-            <p class="lede">
-              The same cycle, in crawlable HTML. Routine work stays in the rails. Launch waits
-              on you.
-            </p>
-          </div>
-          <ol class="loop">
+          <ol class="hiw">
             <li>
+              <span class="hiw-ico" style="background:#5a45ff" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 5.5h10M4 9h7M4 12.5h8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
               <h3>Learn</h3>
-              <p>Business, brand, and constraints before anyone drafts.</p>
+              <p>Business, brand, and constraints first.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#3b82f6" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><circle cx="8" cy="8" r="4.2" stroke="#fff" stroke-width="1.8"/><path d="m11.2 11.2 3 3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
               <h3>Research</h3>
-              <p>Audience, market, and the brief behind the next asset.</p>
+              <p>The brief behind the next asset.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#22a06b" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3.5" y="4" width="11" height="11" rx="2" stroke="#fff" stroke-width="1.7"/><path d="M6 2.8v2.6M12 2.8v2.6M3.5 8h11" stroke="#fff" stroke-width="1.7" stroke-linecap="round"/></svg>
+              </span>
               <h3>Plan</h3>
-              <p>Head of Marketing sets priorities and the rails.</p>
+              <p>Head of Marketing sets the rails.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#f59e0b" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><rect x="3" y="8" width="5" height="7" rx="1" fill="#fff"/><rect x="10" y="4" width="5" height="11" rx="1" fill="#fff"/></svg>
+              </span>
               <h3>Build</h3>
-              <p>Specialist seats draft inside those rails.</p>
+              <p>Specialists draft inside those rails.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#7b6cff" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M4 13.5c3-1 4-6 5-9l6 2c-2 3-6 5-9 6l-2 3z" fill="#fff"/></svg>
+              </span>
               <h3>Launch</h3>
-              <p>You approve spend, send, and publish.</p>
+              <p>You approve spend, send, publish.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#0ea5e9" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M3 13V5h2.4l2 4 2-4H12v8" stroke="#fff" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              </span>
               <h3>Measure</h3>
-              <p>Analytics reports what your tools recorded.</p>
+              <p>What your tools recorded. Empty is allowed.</p>
             </li>
             <li>
+              <span class="hiw-ico" style="background:#4330d4" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M5 9a4 4 0 1 1 1.2 2.8" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/><path d="M4 13v-3h3" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg>
+              </span>
               <h3>Improve</h3>
               <p>The next pass uses what we can see.</p>
             </li>
@@ -198,44 +240,190 @@
         </div>
       </section>
 
-      <section class="section" aria-labelledby="org-heading">
+      <section class="section" id="team" aria-labelledby="meet-heading">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">AI team</p>
-            <h2 id="org-heading">A hierarchy, not a pile of prompts</h2>
+            <p class="kicker">Meet the team</p>
+            <h2 id="meet-heading">A department you can see</h2>
             <p class="lede">
-              Head of Marketing sits above the specialists. Analytics and QA sit separately —
-              they check and report; they do not run the department.
+              Head of Marketing sits above the specialists. Analytics and QA sit separately.
+              Seats, not a headcount slogan.
             </p>
           </div>
-          <figure class="org">
-            <div class="org-lead">
-              <span class="org-k">Team lead</span>
-              Head of Marketing
-            </div>
-            <p class="org-label">Specialists</p>
-            <ul class="org-specialists">
-              <li>Intelligence</li>
-              <li>Content</li>
-              <li>Search / GEO</li>
-              <li>Demand</li>
-              <li>Creative Studio</li>
-              <li>Web / CRO</li>
-              <li>Lifecycle</li>
-              <li>Ops / CRM</li>
-            </ul>
-            <p class="org-label">Separate</p>
-            <ul class="org-support">
-              <li>Analytics</li>
-              <li>QA</li>
-            </ul>
-            <figcaption>
-              Seats, not a headcount slogan. Each role has a job and a line it does not cross.
-            </figcaption>
-          </figure>
-          <div class="cta-row" style="margin-top: 1.4rem; justify-content: center">
-            <a class="btn" href="demo.html">See the team in action</a>
-            <a class="btn btn--ghost" href="marketing.html">Meet the seats</a>
+          <div class="meet-grid">
+            <article class="meet-card meet-card--lead">
+              <p class="team-badge">Team lead</p>
+              <img src="assets/robots/head.svg" alt="" width="200" height="220" />
+              <p class="team-role">Head of Marketing</p>
+              <h3>Priorities and the plan</h3>
+              <p>Assigns the work. Does not spend or publish.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/intel.svg" alt="" width="200" height="220" />
+              <p class="team-role">Intelligence</p>
+              <h3>Research and briefs</h3>
+              <p>Audience and the questions behind a brief.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/content.svg" alt="" width="200" height="220" />
+              <p class="team-role">Content</p>
+              <h3>Pages and long-form</h3>
+              <p>Drafts the words. Does not hit publish.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/search.svg" alt="" width="200" height="220" />
+              <p class="team-role">Search / GEO</p>
+              <h3>Findability</h3>
+              <p>Search and generative-engine visibility.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/demand.svg" alt="" width="200" height="220" />
+              <p class="team-role">Demand</p>
+              <h3>Campaign structure</h3>
+              <p>Builds the plan. Does not spend.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/creative.svg" alt="" width="200" height="220" />
+              <p class="team-role">Creative</p>
+              <h3>Design and motion</h3>
+              <p>Graphics and cuts from a brief. Does not post.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/web.svg" alt="" width="200" height="220" />
+              <p class="team-role">Web / CRO</p>
+              <h3>Pages and tests</h3>
+              <p>Landing drafts. Live changes wait on you.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/lifecycle.svg" alt="" width="200" height="220" />
+              <p class="team-role">Lifecycle</p>
+              <h3>Email and nurture</h3>
+              <p>Sequences stay in draft until you send.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/ops.svg" alt="" width="200" height="220" />
+              <p class="team-role">Ops</p>
+              <h3>Hygiene and tools</h3>
+              <p>Keeps the system tidy. Does not own logins.</p>
+            </article>
+          </div>
+          <p class="assure-head">Assurance — separate from the specialists</p>
+          <div class="meet-grid meet-grid--assure">
+            <article class="meet-card">
+              <img src="assets/robots/analytics.svg" alt="" width="200" height="220" />
+              <p class="team-role">Analytics</p>
+              <h3>Reporting</h3>
+              <p>What your tools recorded. No invented lift.</p>
+            </article>
+            <article class="meet-card">
+              <img src="assets/robots/qa.svg" alt="" width="200" height="220" />
+              <p class="team-role">QA</p>
+              <h3>Guardrail check</h3>
+              <p>Reads drafts before they reach you.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="make-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">What the team creates</p>
+            <h2 id="make-heading">Drafts you can approve</h2>
+            <p class="lede">Device frames only. No campaign results. Nothing listed here is a live metric.</p>
+          </div>
+          <div class="make-grid">
+            <article class="make-card">
+              <div class="device">
+                <div class="phone" aria-hidden="true"><div class="phone-screen"><div class="phone-bar"></div><div class="phone-card"></div><div class="phone-bar"></div><div class="phone-bar"></div></div></div>
+              </div>
+              <h3>Ad campaigns</h3>
+              <p>Structure and variants. Spend waits on you.</p>
+            </article>
+            <article class="make-card">
+              <div class="device">
+                <div class="phone" aria-hidden="true"><div class="phone-screen"><div class="phone-bar" style="width:40%"></div><div class="phone-card" style="background:linear-gradient(135deg,#fde7f3,#efeaff)"></div><div class="phone-bar"></div></div></div>
+              </div>
+              <h3>Social content</h3>
+              <p>A week of posts, still waiting on publish.</p>
+            </article>
+            <article class="make-card">
+              <div class="device">
+                <div class="web" aria-hidden="true">
+                  <div class="web-chrome"><i></i><i></i><i></i></div>
+                  <div class="web-body"><div class="web-bar" style="width:70%"></div><div class="web-bar"></div><div class="web-bar" style="width:55%"></div></div>
+                </div>
+              </div>
+              <h3>Blog and SEO</h3>
+              <p>Pages and briefs. Unpublished until you say so.</p>
+            </article>
+            <article class="make-card">
+              <div class="device">
+                <div class="mail" aria-hidden="true">
+                  <div class="mail-row" style="width:50%"></div>
+                  <div class="mail-row"></div>
+                  <div class="mail-row" style="width:80%"></div>
+                  <div class="mail-row" style="width:64%"></div>
+                </div>
+              </div>
+              <h3>Email campaigns</h3>
+              <p>Lifecycle drafts. The list waits on you.</p>
+            </article>
+            <article class="make-card">
+              <div class="device">
+                <div class="web" aria-hidden="true">
+                  <div class="web-chrome"><i></i><i></i><i></i></div>
+                  <div class="web-body"><div class="phone-card" style="height:2.4rem"></div><div class="web-bar" style="width:40%"></div></div>
+                </div>
+              </div>
+              <h3>Landing pages</h3>
+              <p>Web and CRO drafts. Production stays gated.</p>
+            </article>
+            <article class="make-card">
+              <div class="device">
+                <div class="web" aria-hidden="true">
+                  <div class="web-chrome"><i></i><i></i><i></i></div>
+                  <div class="web-body">
+                    <svg viewBox="0 0 120 40" width="120" height="40" aria-hidden="true"><path d="M4 30 C24 28 34 16 54 18 C74 20 84 8 116 6" fill="none" stroke="#5a45ff" stroke-width="2"/></svg>
+                  </div>
+                </div>
+              </div>
+              <h3>Reports and insights</h3>
+              <p>Layout only. No invented pipeline.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="res-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Resources</p>
+            <h2 id="res-heading">What we can actually show</h2>
+            <p class="lede">No invented articles. Three honest doors — not a magazine of fake proof.</p>
+          </div>
+          <div class="res-grid">
+            <article class="res-card">
+              <p class="resource-tag">Research</p>
+              <h3>A hub. Notes come later.</h3>
+              <p>We are not publishing a library of invented essays in this pass.</p>
+              <a href="research.html">Read article →</a>
+              <div class="res-art" aria-hidden="true"></div>
+            </article>
+            <article class="res-card">
+              <p class="resource-tag">About</p>
+              <h3>Founder-led. Human-accountable.</h3>
+              <p>AI-operated seats. You stay on the gates. Chris Momchilov, Barrie.</p>
+              <a href="about.html">Read article →</a>
+              <div class="res-art" aria-hidden="true"></div>
+            </article>
+            <article class="res-card">
+              <p class="resource-tag">Demo</p>
+              <h3>One Tenant 0 workflow</h3>
+              <p>Research through measure, labeled Demo data. No invented lift.</p>
+              <a href="demo.html">Read article →</a>
+              <div class="res-art" aria-hidden="true"></div>
+            </article>
           </div>
         </div>
       </section>
@@ -254,11 +442,11 @@
         <div>
           <h2>Product</h2>
           <ul>
-            <li><a href="#product">Product</a></li>
             <li><a href="how-it-works.html">How it works</a></li>
-            <li><a href="marketing.html">AI Team</a></li>
+            <li><a href="marketing.html">Team</a></li>
             <li><a href="workflows.html">Workflows</a></li>
             <li><a href="demo.html">Demo</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
           </ul>
         </div>
         <div>
@@ -267,15 +455,17 @@
             <li><a href="about.html">About</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="design-partner.html">Design partner</a></li>
-            <li><a href="dashboard.html">Login</a></li>
+            <li><a href="mailto:contact@teamulate.ca">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h2>Contact</h2>
-          <p>English. Founder-led from Barrie, Ontario.</p>
-          <div class="footer-mail">
-            <a href="mailto:contact@teamulate.ca">contact@teamulate.ca</a>
-          </div>
+          <h2>Stay in the loop</h2>
+          <form class="loop-form" data-loop-form action="mailto:contact@teamulate.ca" method="post" enctype="text/plain">
+            <label class="visually-hidden" for="loop-email">Email</label>
+            <input id="loop-email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p>No list yet. This does not add you to HubSpot.</p>
         </div>
       </div>
       <div class="wrap footer-legal">

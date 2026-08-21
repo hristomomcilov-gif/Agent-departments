@@ -84,4 +84,12 @@
       window.location.href = "thank-you.html";
     });
   }
+
+  var loop = document.querySelector("[data-loop-form]");
+  if (loop) {
+    loop.addEventListener("submit", function (event) {
+      event.preventDefault();
+      window.location.href = "thank-you.html";
+    });
+  }
 })();
