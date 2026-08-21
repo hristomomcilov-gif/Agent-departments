@@ -4,11 +4,23 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#5A45FF" />
-    <title>Teamulate — your AI marketing team</title>
+    <title>Teamulate — a full marketing department without building one</title>
     <meta
       name="description"
-      content="Teamulate is a full marketing department without building one. Capacity and visibility from one dashboard. You approve spend, send, and publish."
+      content="Teamulate is an autonomous marketing department for growing B2B companies. Autonomous within your guardrails. Human-controlled for the decisions that matter."
     />
+    <link rel="canonical" href="https://teamulate.ca/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_CA" />
+    <meta property="og:site_name" content="Teamulate" />
+    <meta property="og:title" content="Teamulate — a full marketing department without building one" />
+    <meta
+      property="og:description"
+      content="Autonomous within your guardrails. Always-on monitoring and routine execution. Human-controlled for the decisions that matter."
+    />
+    <meta property="og:url" content="https://teamulate.ca/" />
+    <meta property="og:image" content="https://teamulate.ca/assets/teamulate-mark.png" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="assets/teamulate-mark.png" type="image/png" />
     <link rel="apple-touch-icon" href="assets/teamulate-mark.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -30,14 +42,14 @@
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a href="how-we-work.html">How It Works</a>
-          <a href="marketing.html">Team</a>
-          <a href="dashboard.html">Dashboard</a>
-          <a href="#pricing">Pricing</a>
-          <a href="proof.html">Resources</a>
+          <a href="#product">Product</a>
+          <a href="how-it-works.html">How It Works</a>
+          <a href="marketing.html">AI Team</a>
+          <a href="workflows.html">Workflows</a>
+          <a href="research.html">Research</a>
+          <a href="about.html">About</a>
         </nav>
         <div class="header-tools">
-          <span class="currency-chip" title="Public prices are in US dollars">USD</span>
           <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
             <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" />
@@ -48,7 +60,7 @@
             </svg>
           </button>
           <a class="header-login" href="dashboard.html">Login</a>
-          <a class="btn btn--sm" href="#demo">View demo</a>
+          <a class="btn btn--sm" href="demo.html">See the team in action</a>
         </div>
       </div>
     </header>
@@ -56,44 +68,28 @@
     <main id="main">
       <section class="wrap hero">
         <div>
-          <h1>
-            <span class="h1-brand">Teamulate</span>
-            <span class="h1-value">Your AI marketing team</span>
-          </h1>
-          <p class="promise">A full marketing department. Without building one.</p>
+          <p class="eyebrow">Autonomous marketing department for growing B2B companies.</p>
+          <h1>A full marketing department. Without building one.</h1>
           <p class="lede">
-            Capacity and visibility from one dashboard — a marketing pod around your business,
-            with you on spend, send, and publish.
+            One AI-operated department that researches, drafts, and ships the work. Autonomous
+            within your guardrails. Always-on monitoring and routine execution. Human-controlled
+            for the decisions that matter.
           </p>
-          <ul class="badge-row" aria-label="What you get">
-            <li>11 seats</li>
-            <li>1 dashboard</li>
-            <li>You approve</li>
-          </ul>
           <div class="cta-row">
-            <a class="btn" href="#demo">See the team in action</a>
-            <a class="btn btn--ghost" href="how-we-work.html">See how it works</a>
+            <a class="btn" href="demo.html">See the team in action</a>
+            <a class="btn btn--ghost" href="how-it-works.html">See how it works</a>
           </div>
+          <p class="microcopy">
+            Teamulate is building and marketing Teamulate with the same AI-operated system it
+            offers to clients.
+          </p>
         </div>
-
-        <div class="hero-visual" id="demo">
-          <div class="orbit" aria-hidden="true">
-            <span class="o1">Search / GEO</span>
-            <span class="o2">Analytics</span>
-            <span class="o3">Content</span>
-            <span class="o4">Demand</span>
-            <span class="o5">Lifecycle</span>
-            <span class="o6">Creative</span>
-          </div>
+        <div class="hero-visual">
           <figure class="demo-frame">
-            <p class="demo-banner">Example layout — placeholder, not live results</p>
+            <p class="demo-banner">Demo data — example layout, not live results</p>
             <div class="demo-shell">
               <aside class="demo-side" aria-hidden="true">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span><span></span><span></span>
               </aside>
               <div class="demo-main">
                 <div class="demo-grid">
@@ -106,384 +102,140 @@
                     <span class="demo-empty"></span>
                   </div>
                   <div class="demo-card demo-card--wide">
-                    <strong>Performance over time</strong>
+                    <strong>The loop</strong>
                     <div class="demo-chart" role="img" aria-label="Empty example chart grid"></div>
-                  </div>
-                  <div class="demo-card">
-                    <strong>Queued drafts</strong>
-                    <span class="demo-empty"></span>
-                  </div>
-                  <div class="demo-card">
-                    <strong>Recent activity</strong>
-                    <span class="demo-empty"></span>
                   </div>
                 </div>
               </div>
             </div>
           </figure>
-          <p class="demo-caption">
-            Product mock only. No campaign names, revenue, or invented activity.
+          <p class="demo-caption">Product mock only. Empty placeholders. No invented pipeline.</p>
+        </div>
+      </section>
+
+      <section class="problem" id="product" aria-labelledby="problem-heading">
+        <div class="wrap">
+          <h2 id="problem-heading">Your team does not need another tool. It needs the work to move.</h2>
+          <p class="lede">
+            Tools sit still until someone runs them. Teamulate is the department: seats, a loop,
+            and a queue you can see — with you on spend, send, and publish.
           </p>
         </div>
       </section>
 
-      <section class="section section--soft" id="how-it-works" aria-labelledby="how-heading">
+      <section class="section" aria-labelledby="benefits-heading">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">How it works</p>
-            <h2 id="how-heading">Seven steps. You stay on the gates.</h2>
+            <p class="kicker">Why it exists</p>
+            <h2 id="benefits-heading">Capacity. Visibility. Control.</h2>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <h3>The work moves</h3>
+              <p>
+                Research, pages, social, and outreach drafts keep landing in the queue. Always-on
+                monitoring and routine execution — not a blank page in the morning.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <h3>One department you can see</h3>
+              <p>
+                A Head of Marketing above specialists, with Analytics and QA beside them. One
+                view of what is drafted, waiting, and approved.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <h3>You keep the gates</h3>
+              <p>
+                Autonomous within your guardrails. Human-controlled for the decisions that
+                matter. You keep the passwords and the payments.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--soft" aria-labelledby="loop-heading">
+        <div class="wrap">
+          <div class="section-head">
+            <p class="kicker">Marketing loop</p>
+            <h2 id="loop-heading">Learn through Improve</h2>
             <p class="lede">
-              Routine work stays in guardrails. Spend, send, and publish wait for a human yes.
-              You keep the passwords and the payments.
+              The same cycle, in crawlable HTML. Routine work stays in the rails. Launch waits
+              on you.
             </p>
           </div>
-          <ol class="steps">
+          <ol class="loop">
             <li>
-              <span class="step-icon" aria-hidden="true">1</span>
               <h3>Learn</h3>
-              <p>We learn the business, brand, and constraints before seats start drafting.</p>
+              <p>Business, brand, and constraints before anyone drafts.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">2</span>
               <h3>Research</h3>
-              <p>Intelligence maps audience, market, and gaps you can actually use.</p>
+              <p>Audience, market, and the brief behind the next asset.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">3</span>
               <h3>Plan</h3>
-              <p>Head of Marketing sets priorities, the calendar, and the rails.</p>
+              <p>Head of Marketing sets priorities and the rails.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">4</span>
               <h3>Build</h3>
-              <p>Specialist seats draft the assets inside those rails.</p>
+              <p>Specialist seats draft inside those rails.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">5</span>
               <h3>Launch</h3>
-              <p>You approve spend, send, and publish. Nothing fires on its own.</p>
+              <p>You approve spend, send, and publish.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">6</span>
               <h3>Measure</h3>
-              <p>Analytics reports what happened — from your tools, in one view.</p>
+              <p>Analytics reports what your tools recorded.</p>
             </li>
             <li>
-              <span class="step-icon" aria-hidden="true">7</span>
               <h3>Improve</h3>
-              <p>The next cycle uses what we can see, not a promised lift.</p>
+              <p>The next pass uses what we can see.</p>
             </li>
           </ol>
         </div>
       </section>
 
-      <section class="section" id="team" aria-labelledby="team-heading">
+      <section class="section" aria-labelledby="org-heading">
         <div class="wrap">
           <div class="section-head">
-            <p class="kicker">Meet the pod</p>
-            <h2 id="team-heading">A marketing department you can see</h2>
+            <p class="kicker">AI team</p>
+            <h2 id="org-heading">A hierarchy, not a pile of prompts</h2>
             <p class="lede">
-              These are the real Teamulate marketing seats — not a pile of unnamed agents.
-              Each one has a job, and a line it does not cross.
+              Head of Marketing sits above the specialists. Analytics and QA sit separately —
+              they check and report; they do not run the department.
             </p>
           </div>
-          <div class="team-grid">
-            <article class="team-card team-card--lead">
-              <p class="team-badge">Team lead</p>
-              <div class="figure figure--lead" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-crown"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Head of Marketing</p>
-              <h3>Priorities and the plan</h3>
-              <p>Assigns the work so the pieces fit. Does not spend or publish.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--intel" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Intelligence</p>
-              <h3>Research and briefs</h3>
-              <p>Audience, competitors, and the questions behind a brief.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--content" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Content</p>
-              <h3>Pages and long-form</h3>
-              <p>Drafts the words. Does not hit publish.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--search" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Search / GEO</p>
-              <h3>Findability</h3>
-              <p>Search and generative-engine visibility, still inside your rails.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--demand" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Demand</p>
-              <h3>Campaign structure</h3>
-              <p>Builds the plan and the variants. Does not spend.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--creative" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Creative Studio</p>
-              <h3>Design drafts</h3>
-              <p>Graphics and motion from a brief. Does not post.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--web" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Web / CRO</p>
-              <h3>Pages and tests</h3>
-              <p>Landing drafts and experiments. Live changes wait on you.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--lifecycle" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Lifecycle</p>
-              <h3>Email and nurture</h3>
-              <p>Sequences stay in draft until you send.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--ops" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Ops / CRM</p>
-              <h3>Hygiene and tools</h3>
-              <p>Keeps the system tidy. Does not own your logins.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--analytics" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">Analytics</p>
-              <h3>Reporting</h3>
-              <p>One view of what your tools already recorded.</p>
-            </article>
-            <article class="team-card">
-              <div class="figure figure--qa" aria-hidden="true">
-                <span class="figure-glow"></span>
-                <span class="figure-head"></span>
-                <span class="figure-visor"></span>
-                <span class="figure-body"></span>
-              </div>
-              <p class="team-role">QA</p>
-              <h3>Guardrail check</h3>
-              <p>Reads drafts against brand and rails before they reach you.</p>
-            </article>
-          </div>
+          <figure class="org">
+            <div class="org-lead">
+              <span class="org-k">Team lead</span>
+              Head of Marketing
+            </div>
+            <p class="org-label">Specialists</p>
+            <ul class="org-specialists">
+              <li>Intelligence</li>
+              <li>Content</li>
+              <li>Search / GEO</li>
+              <li>Demand</li>
+              <li>Creative Studio</li>
+              <li>Web / CRO</li>
+              <li>Lifecycle</li>
+              <li>Ops / CRM</li>
+            </ul>
+            <p class="org-label">Separate</p>
+            <ul class="org-support">
+              <li>Analytics</li>
+              <li>QA</li>
+            </ul>
+            <figcaption>
+              Seats, not a headcount slogan. Each role has a job and a line it does not cross.
+            </figcaption>
+          </figure>
           <div class="cta-row" style="margin-top: 1.4rem; justify-content: center">
-            <a class="btn btn--ghost" href="marketing.html">See every seat</a>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--soft" aria-labelledby="creates-heading">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">What the team creates</p>
-            <h2 id="creates-heading">Drafts you can approve</h2>
-            <p class="lede">
-              Work shows up as assets in the queue — not a black box. Nothing listed here is a
-              live result.
-            </p>
-          </div>
-          <div class="create-grid">
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Campaign drafts</h3>
-              <p>Structure, variants, and the questions that need a spend yes.</p>
-            </article>
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Social drafts</h3>
-              <p>A week of posts, still waiting on publish.</p>
-            </article>
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Blog and search drafts</h3>
-              <p>Pages and briefs aimed at search and GEO — unpublished until you say so.</p>
-            </article>
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Email sequences</h3>
-              <p>Lifecycle drafts in your email tool. The list waits on you.</p>
-            </article>
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Landing pages</h3>
-              <p>Web and CRO drafts. Production changes stay gated.</p>
-            </article>
-            <article class="create-card">
-              <div class="create-thumb" aria-hidden="true"></div>
-              <h3>Reports and insights</h3>
-              <p>What your own tools recorded, pulled into one view.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="pricing" aria-labelledby="price-heading">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">The offer</p>
-            <h2 id="price-heading">Three public plans. USD.</h2>
-            <p class="lede">
-              Scope is confirmed in week one. AWS, Grok Bot, martech, and ad spend are
-              client-owned and billed separately.
-            </p>
-          </div>
-
-          <div class="price-grid">
-            <article class="price-card">
-              <p class="price-k">Core</p>
-              <p class="price-n">
-                US$7,500 setup
-                <small>US$5,000 / month</small>
-              </p>
-              <ul>
-                <li>Strategy and research</li>
-                <li>Content, SEO / GEO, social, email</li>
-                <li>Web monitoring, dashboard / reporting, QA</li>
-              </ul>
-              <ul class="price-limits">
-                <li>1 brand · 4 integrations</li>
-                <li>8 recurring workflows</li>
-                <li>2 primary channels + email / site</li>
-              </ul>
-              <a class="btn btn--ghost btn--block" href="mailto:christo.momchilov@gmail.com">Ask about Core</a>
-            </article>
-
-            <article class="price-card price-card--featured">
-              <p class="price-badge">Most popular</p>
-              <p class="price-k">Growth</p>
-              <p class="price-n">
-                US$12,500 setup
-                <small>US$7,500 / month</small>
-              </p>
-              <ul>
-                <li>Everything in Core</li>
-                <li>CRM ops, lifecycle / nurture, lead gen</li>
-                <li>Paid media management, landing pages / CRO, attribution</li>
-                <li>Monthly strategy review</li>
-              </ul>
-              <ul class="price-limits">
-                <li>1 brand · 8 integrations · 20 workflows</li>
-                <li>Up to 4 active channels</li>
-                <li>Paid media up to ~US$25K / mo · 1 CRO experiment</li>
-              </ul>
-              <a class="btn btn--block" href="mailto:christo.momchilov@gmail.com">Ask about Growth</a>
-            </article>
-
-            <article class="price-card">
-              <p class="price-k">Scale</p>
-              <p class="price-n">
-                US$20,000 setup
-                <small>US$12,000 / month</small>
-              </p>
-              <ul>
-                <li>Everything in Growth</li>
-                <li>Advanced CRM / ABM / outbound, customer marketing</li>
-                <li>Multi-channel paid, advanced attribution</li>
-                <li>Multiple CRO tests, custom workflows, priority support</li>
-              </ul>
-              <ul class="price-limits">
-                <li>1–2 business units · 12 integrations · 35 workflows</li>
-                <li>Up to 6 channels</li>
-                <li>Paid media up to ~US$75K / mo · 3 experiments</li>
-              </ul>
-              <a class="btn btn--ghost btn--block" href="mailto:christo.momchilov@gmail.com">Ask about Scale</a>
-            </article>
-          </div>
-
-          <p class="price-note">
-            AWS, Grok Bot, martech, and ad spend stay on your accounts. We do not take a cut of
-            spend. You keep the passwords and the payments.
-          </p>
-          <p class="cad-note">
-            Local example only, not the offer currency: Core ~C$10.5K + C$6.9K/mo; Growth
-            ~C$17.5K + C$10.5K/mo; Scale ~C$27.5K + C$16.5K/mo.
-          </p>
-
-          <ul class="trust-bar">
-            <li>Guardrailed routines</li>
-            <li>You approve the gates</li>
-            <li>Client-owned tools</li>
-            <li>Transparent scope</li>
-            <li>You keep the logins</li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="section section--soft" aria-labelledby="resources-heading">
-        <div class="wrap">
-          <div class="section-head">
-            <p class="kicker">Resources</p>
-            <h2 id="resources-heading">What we can actually show</h2>
-            <p class="lede">
-              No testimonials, no borrowed logos, no invented lift. Two crews we already run on
-              ourselves, and one Tuesday.
-            </p>
-          </div>
-          <div class="resource-grid">
-            <article class="resource-card">
-              <p class="resource-tag">On ourselves</p>
-              <h3>Job-hunt crew</h3>
-              <p>Skipper, Scout, Screen, Taylor, Clerk — a real crew we run, not a customer story.</p>
-              <a href="proof.html#job-hunt">Read the seats →</a>
-            </article>
-            <article class="resource-card">
-              <p class="resource-tag">Barrie</p>
-              <h3>Local-shop play</h3>
-              <p>Pages and SMS drafts for shops around here. Nothing leaves without a yes.</p>
-              <a href="proof.html#barrie">How that works →</a>
-            </article>
-            <article class="resource-card">
-              <p class="resource-tag">The loop</p>
-              <h3>A Tuesday</h3>
-              <p>A draft in the queue. A line changed after dinner. One yes. That is the loop.</p>
-              <a href="proof.html#tuesday">See the loop →</a>
-            </article>
+            <a class="btn" href="demo.html">See the team in action</a>
+            <a class="btn btn--ghost" href="marketing.html">Meet the seats</a>
           </div>
         </div>
       </section>
@@ -497,35 +249,37 @@
               <img class="brand-logo" src="assets/teamulate-logo.png" alt="Teamulate" width="211" height="73" />
             </span>
           </a>
-          <p>A full marketing department. Without building one. Chris Momchilov · Barrie, Ontario.</p>
+          <p>A full marketing department. Without building one.</p>
         </div>
         <div>
           <h2>Product</h2>
           <ul>
-            <li><a href="how-we-work.html">How it works</a></li>
-            <li><a href="marketing.html">Team</a></li>
-            <li><a href="dashboard.html">Dashboard</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="how-it-works.html">How it works</a></li>
+            <li><a href="marketing.html">AI Team</a></li>
+            <li><a href="workflows.html">Workflows</a></li>
+            <li><a href="demo.html">Demo</a></li>
           </ul>
         </div>
         <div>
           <h2>Company</h2>
           <ul>
-            <li><a href="proof.html">Resources</a></li>
-            <li><a href="mailto:christo.momchilov@gmail.com">Contact Chris</a></li>
-            <li>Barrie, Ontario</li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="design-partner.html">Design partner</a></li>
+            <li><a href="dashboard.html">Login</a></li>
           </ul>
         </div>
         <div>
-          <h2>Stay in the loop</h2>
-          <p>No signup form yet. Email Chris if you want a conversation.</p>
+          <h2>Contact</h2>
+          <p>English. Founder-led from Barrie, Ontario.</p>
           <div class="footer-mail">
-            <a href="mailto:christo.momchilov@gmail.com">christo.momchilov@gmail.com</a>
+            <a href="mailto:contact@teamulate.ca">contact@teamulate.ca</a>
           </div>
         </div>
       </div>
       <div class="wrap footer-legal">
-        Teamulate · English · Public prices in USD · Login is not live yet.
+        Teamulate · Autonomous within your guardrails · Login is not live yet.
       </div>
     </footer>
     <script src="js/site.js"></script>

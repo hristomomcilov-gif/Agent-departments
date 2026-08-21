@@ -1,31 +1,31 @@
 # Teamulate
 
-Site for Teamulate / Chris Momchilov: a full marketing department without building one.
-
-Static pages. No build step. No client login.
+Static marketing site for Teamulate. No build step. No client login. No public price list.
 
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
-| How it works | `how-we-work.html` |
-| Team | `marketing.html` |
+| How it works | `how-it-works.html` |
+| AI Team | `marketing.html` |
+| Workflows | `workflows.html` |
+| Research hub | `research.html` |
+| About | `about.html` |
+| Demo stepper | `demo.html` |
+| Design partner | `design-partner.html` |
+| Thank you | `thank-you.html` |
 | Dashboard (coming soon) | `dashboard.html` |
-| Resources | `proof.html` |
+| Pricing (noindex, no numbers) | `pricing.html` |
 
-Public offer is USD: Core, Growth, and Scale. AWS, Grok Bot, martech, and ad spend are client-owned.
+`robots.txt` allows marketing pages only and disallows shop slugs. Canonical host: `https://teamulate.ca`.
 
 ## Preview locally
-
-From this folder:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open [http://localhost:8080](http://localhost:8080).
-
-Official logo: `assets/teamulate-logo.png` (header, on a dark plate). Cropped mark: `assets/teamulate-mark.png` (favicon).
+Official logo: `assets/teamulate-logo.png`. Mark: `assets/teamulate-mark.png`.
 
 ## Contact
 
-Chris Momchilov · Barrie, Ontario · christo.momchilov@gmail.com
+contact@teamulate.ca · Chris Momchilov · Barrie, Ontario

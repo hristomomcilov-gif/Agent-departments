@@ -59,4 +59,29 @@
       });
     });
   }
+
+  var form = document.querySelector("[data-partner-form]");
+  if (form) {
+    var error = form.querySelector("[data-form-error]");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      if (error) {
+        error.hidden = true;
+        error.textContent = "";
+      }
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+      var email = form.querySelector('[name="email"]');
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        if (error) {
+          error.textContent = "Enter a work email.";
+          error.hidden = false;
+        }
+        return;
+      }
+      window.location.href = "thank-you.html";
+    });
+  }
 })();
