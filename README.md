@@ -12,13 +12,14 @@ Static marketing site for Teamulate. No build step. No public price list. Multi-
 | About | `about.html` |
 | Demo stepper | `demo.html` |
 | Public demo dashboard | `demo-dashboard.html` |
+| Product dashboard (noindex) | `dashboard.html` |
+| Campaigns / Content / Leads / SEO / Social / Reports / Settings | matching `.html` files |
 | Design partner | `design-partner.html` |
 | Thank you | `thank-you.html` |
 | Login (noindex, Tenant 0 preview) | `login.html` |
-| Command Center shell (noindex) | `dashboard.html` |
 | Pricing (noindex, no numbers) | `pricing.html` |
 
-`robots.txt` allows marketing pages only and disallows shop slugs, `/pricing.html`, `/thank-you.html`, `/login.html`, and `/dashboard.html`. Canonical host: `https://teamulate.ca`.
+Product dashboard pages share `css/app.css` + `js/app.js`. Sample figures are demo data only and carry a persistent banner. `robots.txt` allows marketing pages and the public demo dashboard, and disallows shop slugs plus the internal app pages. Canonical host: `https://teamulate.ca`.
 
 ## Preview locally
 

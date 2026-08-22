@@ -5,6 +5,13 @@ Disallow: /pricing
 Disallow: /thank-you.html
 Disallow: /dashboard.html
 Disallow: /login.html
+Disallow: /campaigns.html
+Disallow: /content.html
+Disallow: /leads.html
+Disallow: /seo.html
+Disallow: /social.html
+Disallow: /reports.html
+Disallow: /settings.html
 Disallow: /jeff-mackie
 Disallow: /jeff-mackie/
 Disallow: /walkers-electric
