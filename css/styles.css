@@ -181,8 +181,10 @@ a:hover {
 }
 
 .brand-logo {
-  height: 32px;
+  display: block;
+  height: 48px;
   width: auto;
+  max-width: none;
 }
 
 .nav-toggle {
@@ -324,7 +326,7 @@ a:hover {
   }
 
   .brand-logo {
-    height: 36px;
+    height: 52px;
   }
 }
 
