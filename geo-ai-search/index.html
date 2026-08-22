@@ -53,11 +53,27 @@
         <nav class="nav" id="site-nav" aria-label="Primary">
           <a href="../how-it-works.html">How It Works</a>
           <a href="../marketing.html">Team</a>
-          <a href="../workflows.html">Workflows</a>
-          <a href="../blog/index.html" aria-current="page">Blog</a>
-          <a href="../about.html">About</a>
+          <a href="../demo-dashboard.html">Dashboard</a>
+          <a href="../index.html#pricing">Pricing</a>
+          <a href="../blog/index.html">Blog</a>
         </nav>
         <div class="header-tools">
+          <span class="currency-chip" title="USD public prices. CAD is a local label.">
+            <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true">
+              <rect width="14" height="10" rx="1" fill="#ff0000"/>
+              <path d="M7 2.1l.45 1.3h1.35l-1.1.8.42 1.3L7 4.7 5.88 5.5l.42-1.3-1.1-.8h1.35z" fill="#fff"/>
+            </svg>
+            CAD
+          </span>
+          <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
+            <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" />
+              <path d="M8 1.6v1.5M8 12.9v1.5M1.6 8h1.5M12.9 8h1.5M3.2 3.2l1.1 1.1M11.7 11.7l1.1 1.1M3.2 12.8l1.1-1.1M11.7 4.3l1.1-1.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+            <svg class="icon-moon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M12.6 10.2A5.2 5.2 0 0 1 6 3.4a5.3 5.3 0 1 0 6.6 6.8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" />
+            </svg>
+          </button>
           <a class="header-login" href="../login.html">Login</a>
           <a class="btn btn--sm" href="../demo.html">See the team in action</a>
         </div>
@@ -89,29 +105,39 @@
           <p>A full marketing department. Without building one.</p>
         </div>
         <div>
-          <h2>Guides</h2>
+          <h2>Product</h2>
           <ul>
-            <li><a href="../autonomous-ai-marketing-department/">Department</a></li>
-            <li><a href="../ai-marketing-team/">AI marketing team</a></li>
-            <li><a href="../ai-agents-for-marketing/">AI agents</a></li>
-            <li><a href="../compare/ai-vs-agency-vs-fractional-vs-inhouse/">Compare</a></li>
+            <li><a href="../how-it-works.html">How it works</a></li>
+            <li><a href="../marketing.html">Team</a></li>
+            <li><a href="../index.html#pricing">Pricing</a></li>
+            <li><a href="../demo.html">Demo</a></li>
+            <li><a href="../demo-dashboard.html">Demo dashboard</a></li>
           </ul>
         </div>
         <div>
           <h2>Company</h2>
           <ul>
             <li><a href="../about.html">About</a></li>
-            <li><a href="../research.html">Research</a></li>
             <li><a href="../blog/index.html">Blog</a></li>
+            <li><a href="../research.html">Research</a></li>
             <li><a href="../design-partner.html">Design partner</a></li>
+            <li><a href="../login.html">Login</a></li>
+            <li><a href="mailto:contact@teamulate.ca">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h2>Contact</h2>
-          <div class="footer-mail"><a href="mailto:contact@teamulate.ca">contact@teamulate.ca</a></div>
+          <h2>Stay in the loop</h2>
+          <form class="loop-form" data-loop-form action="mailto:contact@teamulate.ca" method="post" enctype="text/plain">
+            <label class="visually-hidden" for="loop-email">Email</label>
+            <input id="loop-email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p>No list yet. This does not add you to HubSpot.</p>
         </div>
       </div>
-      <div class="wrap footer-legal">Teamulate · Teamulate builds autonomous AI marketing departments for B2B companies.</div>
+      <div class="wrap footer-legal">
+        Teamulate · Autonomous within your guardrails · Login is not live yet.
+      </div>
     </footer>
     <script src="../js/site.js"></script>
   </body>

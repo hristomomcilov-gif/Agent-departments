@@ -43,14 +43,20 @@
         </a>
         <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
         <nav class="nav" id="site-nav" aria-label="Primary">
-          <a href="index.html#product">Product</a>
           <a href="how-it-works.html">How It Works</a>
-          <a href="marketing.html">AI Team</a>
-          <a href="workflows.html">Workflows</a>
+          <a href="marketing.html">Team</a>
+          <a href="demo-dashboard.html">Dashboard</a>
+          <a href="index.html#pricing">Pricing</a>
           <a href="blog/index.html">Blog</a>
-          <a href="about.html" aria-current="page">About</a>
         </nav>
         <div class="header-tools">
+          <span class="currency-chip" title="USD public prices. CAD is a local label.">
+            <svg width="14" height="10" viewBox="0 0 14 10" aria-hidden="true">
+              <rect width="14" height="10" rx="1" fill="#ff0000"/>
+              <path d="M7 2.1l.45 1.3h1.35l-1.1.8.42 1.3L7 4.7 5.88 5.5l.42-1.3-1.1-.8h1.35z" fill="#fff"/>
+            </svg>
+            CAD
+          </span>
           <button class="theme-toggle" type="button" aria-pressed="false" aria-label="Switch to dark theme">
             <svg class="icon-sun" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <circle cx="8" cy="8" r="2.4" stroke="currentColor" stroke-width="1.6" />
@@ -112,28 +118,32 @@
         <div>
           <h2>Product</h2>
           <ul>
-            <li><a href="index.html#product">Product</a></li>
             <li><a href="how-it-works.html">How it works</a></li>
-            <li><a href="marketing.html">AI Team</a></li>
-            <li><a href="workflows.html">Workflows</a></li>
+            <li><a href="marketing.html">Team</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
             <li><a href="demo.html">Demo</a></li>
+            <li><a href="demo-dashboard.html">Demo dashboard</a></li>
           </ul>
         </div>
         <div>
           <h2>Company</h2>
           <ul>
             <li><a href="about.html">About</a></li>
+            <li><a href="blog/index.html">Blog</a></li>
             <li><a href="research.html">Research</a></li>
             <li><a href="design-partner.html">Design partner</a></li>
             <li><a href="login.html">Login</a></li>
+            <li><a href="mailto:contact@teamulate.ca">Contact</a></li>
           </ul>
         </div>
         <div>
-          <h2>Contact</h2>
-          <p>English. Founder-led from Barrie, Ontario.</p>
-          <div class="footer-mail">
-            <a href="mailto:contact@teamulate.ca">contact@teamulate.ca</a>
-          </div>
+          <h2>Stay in the loop</h2>
+          <form class="loop-form" data-loop-form action="mailto:contact@teamulate.ca" method="post" enctype="text/plain">
+            <label class="visually-hidden" for="loop-email">Email</label>
+            <input id="loop-email" type="email" name="email" autocomplete="email" required placeholder="you@company.com" />
+            <button type="submit">Subscribe</button>
+          </form>
+          <p>No list yet. This does not add you to HubSpot.</p>
         </div>
       </div>
       <div class="wrap footer-legal">
