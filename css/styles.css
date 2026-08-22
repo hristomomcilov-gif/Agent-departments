@@ -2082,11 +2082,32 @@ p:last-child {
 
 .meet-card {
   position: relative;
-  padding: 1.1rem 1rem 1.15rem;
+  display: grid;
+  grid-template-columns: 7.2rem 1fr;
+  gap: 0.75rem 0.9rem;
+  align-items: center;
+  padding: 1rem 1rem 1.05rem;
   border: 1px solid #eceef6;
   border-radius: 16px;
   background: #fff;
   box-shadow: var(--shadow);
+}
+
+.meet-card .team-badge {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
+.meet-card img {
+  width: 7.2rem;
+  height: 8.2rem;
+  margin: 0;
+  object-fit: contain;
+  object-position: center bottom;
+}
+
+.meet-card .meet-copy {
+  min-width: 0;
 }
 
 .meet-card--lead {
@@ -2094,7 +2115,10 @@ p:last-child {
   box-shadow: 0 16px 40px rgba(90, 69, 255, 0.12);
 }
 
-.meet-card img,
+.meet-card--text {
+  grid-template-columns: 1fr;
+}
+
 .team-card img {
   width: min(100%, 11rem);
   height: 11.5rem;
@@ -2154,8 +2178,16 @@ p:last-child {
 .device {
   display: grid;
   place-items: center;
-  height: 11.5rem;
+  min-height: 11.5rem;
   background: linear-gradient(180deg, #f3f1ff, #eef1fb);
+}
+
+.make-card .create-shot {
+  width: 100%;
+  height: 12.5rem;
+  object-fit: cover;
+  object-position: center;
+  background: #f6f5fb;
 }
 
 .phone {

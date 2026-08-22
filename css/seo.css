@@ -71,3 +71,66 @@
   margin: 0.25rem 0;
   color: var(--ink-dim);
 }
+
+.faq details {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.faq p {
+  margin: 0.45rem 0 0;
+  color: var(--ink-dim);
+}
+
+.week-steps {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.week-steps li {
+  margin: 0.55rem 0;
+  color: var(--ink-dim);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+}
+
+.article-quote {
+  margin: 0 0 1.2rem;
+  padding: 0.9rem 1rem 0.95rem 1.05rem;
+  border-left: 4px solid var(--purple);
+  background: var(--purple-soft);
+  border-radius: 0 12px 12px 0;
+  color: var(--ink);
+}
+
+.article-cta {
+  margin: 0 0 1.5rem;
+}
+
+.wrap--narrow > h2 {
+  margin: 1.7rem 0 0.65rem;
+}
+
+.wrap--narrow > p,
+.wrap--narrow > ul,
+.wrap--narrow > ol {
+  color: var(--ink-dim);
+}
+
+.wrap--narrow > ul,
+.wrap--narrow > ol {
+  padding-left: 1.15rem;
+}
+
+.wrap--narrow > ul li,
+.wrap--narrow > ol li {
+  margin: 0.35rem 0;
+}
