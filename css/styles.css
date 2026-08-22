@@ -2232,7 +2232,7 @@ p:last-child {
     justify-content: center;
     align-items: center;
     margin: 1.35rem 0 0;
-    padding-top: 1.15rem;
+    padding: 1.15rem 0 0;
   }
 
   .hiw-loop::before {
