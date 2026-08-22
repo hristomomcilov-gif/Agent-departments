@@ -9,8 +9,8 @@ Static marketing site for Teamulate. No build step. No public price list. Multi-
 | AI Team | `marketing.html` |
 | Workflows | `workflows.html` |
 | Research hub | `research.html` |
-| Product (BOFU) | `autonomous-ai-marketing-department.html` |
-| AI marketing team pillar | `ai-marketing-team.html` |
+| Product (BOFU) | `autonomous-ai-marketing-department/` |
+| AI marketing team pillar | `ai-marketing-team/` |
 | AI agents pillar | `ai-agents-for-marketing/` |
 | Automation vs agents | `ai-marketing-automation/` |
 | Compare models | `compare/ai-vs-agency-vs-fractional-vs-inhouse/` |
