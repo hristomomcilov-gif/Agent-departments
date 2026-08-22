@@ -182,7 +182,7 @@ a:hover {
 
 .brand-logo {
   display: block;
-  height: 48px;
+  height: 30px;
   width: auto;
   max-width: none;
 }
@@ -326,7 +326,7 @@ a:hover {
   }
 
   .brand-logo {
-    height: 52px;
+    height: 34px;
   }
 }
 
