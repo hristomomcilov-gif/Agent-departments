@@ -1230,6 +1230,15 @@ p:last-child {
   }
 }
 
+.stat-note {
+  margin: 1.15rem auto 0;
+  max-width: 46rem;
+  color: var(--mute);
+  font-size: 0.86rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
 .price-card ul {
   margin: 1rem 0 0;
   padding: 0;
