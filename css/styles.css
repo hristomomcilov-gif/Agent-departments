@@ -3425,9 +3425,9 @@ p:last-child {
 
 #creates .make-card {
   display: grid;
-  grid-template-columns: minmax(6.6rem, 0.86fr) minmax(0, 1.2fr);
+  grid-template-columns: minmax(6.4rem, 7.5rem) minmax(0, 1fr);
   align-items: stretch;
-  min-height: 7.35rem;
+  min-height: 0;
   overflow: hidden;
   padding: 0;
   border: 1px solid #eceef6;
@@ -3480,18 +3480,24 @@ p:last-child {
 
 .make-preview {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.28rem;
+  display: block;
   min-width: 0;
-  margin: 0.55rem 0.55rem 0.55rem 0;
-  padding: 0.7rem 0.75rem;
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  padding: 0;
   overflow: hidden;
   border-radius: 0.85rem;
-  background:
-    radial-gradient(circle at 88% 18%, rgba(90, 69, 255, 0.16), transparent 42%),
-    linear-gradient(180deg, #f7f5ff, #eef1fb);
+  aspect-ratio: 4 / 3;
+  background: #eef1fb;
+}
+
+.make-shot,
+#creates .make-card .make-shot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
 }
 
 .make-preview-k {
@@ -3689,18 +3695,12 @@ p:last-child {
 }
 
 @media (min-width: 640px) {
-  .make-filters {
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: visible;
-  }
-
   #creates .make-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   #creates .make-card {
-    min-height: 7.6rem;
+    min-height: 0;
   }
 
   .make-banner {
@@ -3733,9 +3733,7 @@ p:last-child {
 }
 
 [data-theme="dark"] .make-preview {
-  background:
-    radial-gradient(circle at 88% 18%, rgba(90, 69, 255, 0.28), transparent 42%),
-    linear-gradient(180deg, #1a1c2b, #12141f);
+  background: #12141f;
 }
 
 [data-theme="dark"] .make-preview-t,
