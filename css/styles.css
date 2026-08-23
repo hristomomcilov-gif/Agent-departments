@@ -2745,9 +2745,9 @@ p:last-child {
 .meet-card {
   position: relative;
   display: grid;
-  grid-template-columns: 7.2rem 1fr;
-  gap: 0.75rem 0.95rem;
-  align-items: center;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.75rem 0.85rem;
+  align-items: stretch;
   padding: 1.1rem 1.1rem 1.15rem;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -2761,24 +2761,30 @@ p:last-child {
   justify-self: start;
 }
 
-.meet-card > img,
-.meet-card > svg {
-  width: 7.2rem;
-  height: auto;
-  max-height: 9rem;
+.meet-visual {
+  align-self: stretch;
+  aspect-ratio: 1 / 1;
+  min-height: 0;
+  display: grid;
+  place-items: center;
+  background: transparent;
+}
+
+.meet-visual img,
+.meet-visual svg {
+  width: 100%;
+  height: 100%;
   margin: 0;
   object-fit: contain;
-  object-position: center bottom;
+  object-position: center;
+  background: transparent;
 }
 
 .meet-id {
   display: flex;
-  gap: 10px;
-  align-items: flex-start;
-}
-
-.meet-id h3 {
-  margin-top: 0.15rem;
+  gap: 0.5rem 0.65rem;
+  align-items: center;
+  min-width: 0;
 }
 
 .meet-ico {
@@ -2817,18 +2823,36 @@ p:last-child {
 }
 
 .meet-card h3 {
-  margin: 0 0 0.12rem;
+  margin: 0;
   color: var(--navy);
   font-size: 1.15rem;
+  line-height: 1.15;
 }
 
-.meet-card .team-role {
-  margin-bottom: 0.35rem;
-  color: var(--purple);
+.meet-id .team-role {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
+
+.meet-card:has(.meet-ico--strategos) .team-role { color: #5A45FF; }
+.meet-card:has(.meet-ico--wordsmith) .team-role { color: #0F8A78; }
+.meet-card:has(.meet-ico--seeker) .team-role { color: #2563EB; }
+.meet-card:has(.meet-ico--socialite) .team-role { color: #E11D74; }
+.meet-card:has(.meet-ico--pixel) .team-role { color: #EA580C; }
+.meet-card:has(.meet-ico--cine) .team-role { color: #DC2626; }
+.meet-card:has(.meet-ico--growth) .team-role { color: #16A34A; }
+.meet-card:has(.meet-ico--metric) .team-role { color: #4F46E5; }
+.meet-card:has(.meet-ico--guardian) .team-role { color: #1E3A8A; }
+.meet-card:has(.meet-ico--intel) .team-role { color: #D97706; }
+.meet-card:has(.meet-ico--web) .team-role { color: #0891B2; }
+.meet-card:has(.meet-ico--ops) .team-role { color: #475569; }
+.meet-card:has(.meet-ico--lifecycle) .team-role { color: #DB2777; }
 
 .meet-card .meet-copy > p:not(.team-role):not(.meet-chip) {
-  margin: 0 0 0.55rem;
+  margin: 0.45rem 0 0.55rem;
   color: var(--ink-dim);
   font-size: 0.9rem;
 }
@@ -2869,9 +2893,8 @@ p:last-child {
   box-shadow: 0 16px 40px rgba(90, 69, 255, 0.12);
 }
 
-.meet-card--lead > img {
-  width: 8.6rem;
-  max-height: 11rem;
+.meet-card--lead .meet-visual {
+  align-self: stretch;
 }
 
 .meet-card--text {
@@ -3379,18 +3402,14 @@ p:last-child {
     gap: 0.55rem;
   }
 
-  .meet-card {
-    grid-template-columns: 44% 1fr;
-    align-items: end;
+  .meet-card,
+  .meet-card--lead {
+    grid-template-columns: auto minmax(0, 1fr);
+    align-items: stretch;
     justify-items: start;
     text-align: left;
-    gap: 0.35rem 0.55rem;
-    padding: 0.45rem 0.55rem 0.4rem;
-  }
-
-  .meet-card--lead {
-    grid-template-columns: 48% 1fr;
-    padding: 0.5rem 0.6rem 0.4rem;
+    gap: 0.4rem 0.6rem;
+    padding: 0.55rem 0.65rem;
   }
 
   .meet-card .team-badge {
@@ -3406,33 +3425,31 @@ p:last-child {
     padding-bottom: 0.2rem;
   }
 
-  .meet-card > img,
-  .meet-card--lead > img,
-  .meet-card > svg {
-    width: 100%;
-    height: auto;
-    min-height: 7.5rem;
-    max-height: 9.2rem;
-    margin: 0;
-    object-fit: contain;
-    object-position: center bottom;
+  .meet-visual {
+    align-self: stretch;
+    aspect-ratio: 1 / 1;
   }
 
-  .meet-card--lead > img {
-    min-height: 9.2rem;
-    max-height: 11.4rem;
+  .meet-visual img,
+  .meet-visual svg {
+    width: 100%;
+    height: 100%;
+    min-height: 0;
+    max-height: none;
+    object-fit: contain;
+    object-position: center;
   }
 
   .meet-ico {
-    flex: 0 0 32px;
-    width: 32px;
-    height: 32px;
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
   }
 
   .meet-card h3 {
-    margin: 0.1rem 0 0.15rem;
+    margin: 0;
     font-size: 0.98rem;
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
   .meet-card p:last-child {
