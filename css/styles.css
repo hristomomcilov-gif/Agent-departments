@@ -3445,10 +3445,11 @@ p:last-child {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 0.5rem;
   min-width: 0;
-  padding: 0.85rem 0.7rem 0.85rem 0.95rem;
+  padding: 0.85rem 0.8rem;
 }
 
 .make-ico,
