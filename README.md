@@ -1,32 +1,42 @@
 # Teamulate
 
-Site for Teamulate / Chris Momchilov: emulating business departments with AI agents.
-
-Four static pages. No build step.
+Static marketing site for Teamulate. No build step. No public price list. Multi-client login is not built.
 
 | Page | File |
 | --- | --- |
 | Home | `index.html` |
-| Marketing department | `marketing.html` |
-| How we work | `how-we-work.html` |
-| Proof | `proof.html` |
+| How it works | `how-it-works.html` |
+| AI Team | `marketing.html` |
+| Workflows | `workflows.html` |
+| Research hub | `research.html` |
+| Product (BOFU) | `autonomous-ai-marketing-department/` |
+| AI marketing team pillar | `ai-marketing-team/` |
+| AI agents pillar | `ai-agents-for-marketing/` |
+| Automation vs agents | `ai-marketing-automation/` |
+| Compare models | `compare/ai-vs-agency-vs-fractional-vs-inhouse/` |
+| Cost research (data pending) | `research/marketing-team-cost-2026/` |
+| Workflow index shell | `research/marketing-workflow-automation-index/` |
+| Guides index | `blog/index.html` |
+| About | `about.html` |
+| Demo stepper | `demo.html` |
+| Public demo dashboard | `demo-dashboard.html` |
+| Product dashboard (noindex) | `dashboard.html` |
+| Campaigns / Content / Leads / SEO / Social / Reports / Settings | matching `.html` files |
+| Design partner | `design-partner.html` |
+| Thank you | `thank-you.html` |
+| Login (noindex, Tenant 0 preview) | `login.html` |
+| Pricing (noindex, no numbers) | `pricing.html` |
+
+Product dashboard pages share `css/app.css` + `js/app.js`. Sample figures are demo data only and carry a persistent banner. `robots.txt` allows marketing pages and the public demo dashboard, and disallows shop slugs plus the internal app pages. Canonical host: `https://teamulate.ca`.
 
 ## Preview locally
-
-From this folder:
 
 ```bash
 python3 -m http.server 8080
 ```
 
-Then open [http://localhost:8080](http://localhost:8080).
-
-You can also open `index.html` directly in a browser. A local server keeps the org-chart links and hashes predictable.
-
-Official logo: `assets/teamulate-logo.png` (header). Cropped mark: `assets/teamulate-mark.png` (favicon). Shown as-is on the dark site.
-
-Official Grok Bot visuals live in `assets/` (wordmark and Agent Dashboard still from x.ai). They are product creative, not screenshots of Chris’s crew.
+Official logo: `assets/teamulate-logo.png`. Mark: `assets/teamulate-mark.png`.
 
 ## Contact
 
-Chris Momchilov · Barrie, Ontario · christo.momchilov@gmail.com
+contact@teamulate.ca · Chris Momchilov · Barrie, Ontario

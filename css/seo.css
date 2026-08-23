@@ -1,0 +1,143 @@
+.cite-block {
+  margin: 0 0 1.4rem;
+  padding: 1.1rem 1.15rem 1.15rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.cite-block .cite-kicker {
+  margin: 0 0 0.45rem;
+  color: var(--purple);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cite-answer {
+  margin: 0 0 0.85rem;
+  color: var(--ink);
+  font-size: 1.02rem;
+}
+
+.cite-entity {
+  margin: 0 0 0.7rem;
+  color: var(--navy);
+  font-weight: 750;
+}
+
+.cite-guard {
+  margin: 0;
+  color: var(--ink-dim);
+  font-size: 0.92rem;
+}
+
+.shell-note {
+  margin: 0 0 1rem;
+  color: var(--mute);
+  font-size: 0.88rem;
+  font-weight: 650;
+}
+
+.matrix {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.matrix th,
+.matrix td {
+  padding: 0.65rem 0.45rem;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+.matrix th {
+  color: var(--mute);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.workflow-index {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.workflow-index li {
+  margin: 0.25rem 0;
+  color: var(--ink-dim);
+}
+
+.faq details {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 750;
+}
+
+.faq p {
+  margin: 0.45rem 0 0;
+  color: var(--ink-dim);
+}
+
+.week-steps {
+  margin: 0;
+  padding-left: 1.15rem;
+}
+
+.week-steps li {
+  margin: 0.55rem 0;
+  color: var(--ink-dim);
+}
+
+.table-wrap {
+  overflow-x: auto;
+  margin: 0 0 1.4rem;
+}
+
+.article-quote {
+  margin: 0 0 1.2rem;
+  padding: 0.9rem 1rem 0.95rem 1.05rem;
+  border-left: 4px solid var(--purple);
+  background: var(--purple-soft);
+  border-radius: 0 12px 12px 0;
+  color: var(--ink);
+}
+
+.article-cta {
+  margin: 0 0 1.5rem;
+}
+
+.wrap--narrow > h2 {
+  margin: 1.7rem 0 0.65rem;
+}
+
+.wrap--narrow > p,
+.wrap--narrow > ul,
+.wrap--narrow > ol {
+  color: var(--ink-dim);
+}
+
+.wrap--narrow > ul,
+.wrap--narrow > ol {
+  padding-left: 1.15rem;
+}
+
+.wrap--narrow > ul li,
+.wrap--narrow > ol li {
+  margin: 0.35rem 0;
+}
+
+.byline {
+  margin: 0 0 0.35rem;
+  color: var(--mute);
+  font-size: 0.88rem;
+  font-weight: 650;
+}

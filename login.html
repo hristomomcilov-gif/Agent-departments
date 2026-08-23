@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#5A45FF" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Login — Teamulate</title>
+    <meta
+      name="description"
+      content="Tenant 0 login preview. Multi-client login is not built. No session is stored in the browser."
+    />
+    <link rel="canonical" href="https://teamulate.ca/login.html" />
+    <link rel="icon" href="assets/teamulate-mark.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <p class="internal-banner">Internal preview — Tenant 0 / Chris only. Multi-client login is not built.</p>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-bar">
+        <a class="brand" href="index.html">
+          <span class="brand-plate">
+            <img class="brand-logo" src="assets/teamulate-logo.png" alt="Teamulate" width="211" height="73" />
+          </span>
+        </a>
+        <a class="btn btn--sm" href="demo-dashboard.html">Demo dashboard</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <header class="wrap page-hero">
+        <p class="kicker">Login</p>
+        <h1>Tenant 0 only. For now.</h1>
+        <p class="lede">
+          This form does not authenticate anyone. It does not store a password in JavaScript and
+          it does not create a session. Submit opens the product dashboard preview. Real
+          HTTP auth will be added at deploy.
+        </p>
+      </header>
+
+      <section class="section">
+        <div class="wrap">
+          <form class="login-card form" data-login-form action="dashboard.html" method="get">
+            <label class="field">
+              <span>Username</span>
+              <input type="text" autocomplete="username" required maxlength="80" />
+            </label>
+            <label class="field">
+              <span>Password</span>
+              <input type="password" autocomplete="current-password" required maxlength="80" />
+            </label>
+            <p class="form-note">
+              Fields have no <code>name</code>, so the password is not put in the URL and is not
+              stored. Submit opens the internal preview. Anyone can also open
+              <a href="dashboard.html">dashboard.html</a> until HTTP auth is added at deploy.
+            </p>
+            <button class="btn" type="submit">Open dashboard</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="js/site.js"></script>
+  </body>
+</html>
