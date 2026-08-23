@@ -111,4 +111,23 @@
       window.location.href = "dashboard.html";
     });
   }
+
+  var creates = document.querySelector("#creates");
+  if (creates) {
+    var filters = creates.querySelectorAll("[data-filter]");
+    var cards = creates.querySelectorAll("[data-make]");
+    filters.forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = btn.getAttribute("data-filter");
+        filters.forEach(function (other) {
+          var on = other === btn;
+          other.classList.toggle("is-active", on);
+          other.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        cards.forEach(function (card) {
+          card.hidden = key !== "all" && card.getAttribute("data-make") !== key;
+        });
+      });
+    });
+  }
 })();
