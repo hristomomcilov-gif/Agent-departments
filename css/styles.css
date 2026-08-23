@@ -3509,8 +3509,6 @@ p:last-child {
   object-fit: contain;
   object-position: center;
   box-shadow: none;
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 100%);
-  mask-image: linear-gradient(to right, transparent 0%, #000 22%, #000 100%);
 }
 
 .make-preview-k {
