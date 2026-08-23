@@ -333,12 +333,21 @@ a:hover {
 /* Type */
 
 .kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
   margin: 0 0 0.75rem;
   color: var(--purple);
   font-size: 0.78rem;
   font-weight: 750;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+}
+
+.kicker-spark {
+  flex: 0 0 auto;
+  color: var(--purple);
 }
 
 h1,
@@ -2264,18 +2273,18 @@ p:last-child {
 
 .meet-grid {
   display: grid;
-  gap: 0.85rem;
+  gap: 0.9rem;
 }
 
 .meet-card {
   position: relative;
   display: grid;
   grid-template-columns: 7.2rem 1fr;
-  gap: 0.75rem 0.9rem;
+  gap: 0.75rem 0.95rem;
   align-items: center;
-  padding: 1rem 1rem 1.05rem;
+  padding: 1.1rem 1.1rem 1.15rem;
   border: 1px solid var(--line);
-  border-radius: 16px;
+  border-radius: 22px;
   background: var(--card);
   color: var(--ink);
   box-shadow: var(--shadow);
@@ -2286,7 +2295,8 @@ p:last-child {
   justify-self: start;
 }
 
-.meet-card img {
+.meet-card img,
+.meet-card svg {
   width: 7.2rem;
   height: auto;
   max-height: 9rem;
@@ -2299,9 +2309,62 @@ p:last-child {
   min-width: 0;
 }
 
+.meet-card h3 {
+  margin: 0 0 0.12rem;
+  color: var(--navy);
+  font-size: 1.15rem;
+}
+
+.meet-card .team-role {
+  margin-bottom: 0.35rem;
+  color: var(--purple);
+}
+
+.meet-card .meet-copy > p:not(.team-role):not(.meet-chip) {
+  margin: 0 0 0.55rem;
+  color: var(--ink-dim);
+  font-size: 0.9rem;
+}
+
+.meet-chip {
+  display: inline-flex;
+  margin: 0;
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--pill);
+  background: var(--purple-soft);
+  color: var(--purple);
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+.meet-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.meet-tags li {
+  padding: 0.22rem 0.55rem;
+  border-radius: var(--pill);
+  background: var(--purple-soft);
+  color: var(--purple);
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
 .meet-card--lead {
+  grid-column: 1 / -1;
   border-color: #cfc8ff;
   box-shadow: 0 16px 40px rgba(90, 69, 255, 0.12);
+}
+
+.meet-card--lead img {
+  width: 8.6rem;
+  max-height: 11rem;
 }
 
 .meet-card--text {
@@ -2315,13 +2378,35 @@ p:last-child {
   object-fit: contain;
 }
 
-.meet-card .team-role {
-  color: var(--purple);
+.meet-bar {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.4rem 0 0;
+  padding: 0.85rem;
+  list-style: none;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--bg-soft);
 }
 
-.meet-card p:last-child {
+.meet-bar li {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  text-align: center;
+}
+
+.meet-bar strong {
+  color: var(--purple);
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.meet-bar span {
   color: var(--ink-dim);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
 }
 
 .assure-head {
@@ -2338,11 +2423,25 @@ p:last-child {
   .meet-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .meet-bar {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1020px) {
   .meet-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .meet-card--lead {
+    grid-template-columns: 10.5rem 1fr;
+    padding: 1.35rem 1.5rem;
+  }
+
+  .meet-bar {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.9rem 0.5rem;
   }
 
   .meet-grid--assure {
@@ -2768,17 +2867,14 @@ p:last-child {
     gap: 0.55rem;
   }
 
-  .meet-card {
-    grid-template-columns: 5.1rem 1fr;
+  .meet-card,
+  .meet-card--lead {
+    grid-template-columns: 5rem 1fr;
     align-items: center;
     justify-items: start;
     text-align: left;
     gap: 0.45rem 0.7rem;
     padding: 0.65rem 0.75rem;
-  }
-
-  .meet-card--lead {
-    grid-template-columns: 5.1rem 1fr;
   }
 
   .meet-card .team-badge {
@@ -2793,10 +2889,12 @@ p:last-child {
     min-width: 0;
   }
 
-  .meet-card img {
-    width: 5.1rem;
+  .meet-card img,
+  .meet-card--lead img,
+  .meet-card svg {
+    width: 5rem;
     height: auto;
-    max-height: 6.1rem;
+    max-height: 6rem;
     object-fit: contain;
   }
 
