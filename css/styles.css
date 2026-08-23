@@ -2872,6 +2872,15 @@ p:last-child {
   box-shadow: var(--shadow);
 }
 
+.meet-card:not(.meet-card--lead) .meet-visual,
+.meet-card:not(.meet-card--lead) .meet-visual img,
+.meet-card:not(.meet-card--lead) .meet-visual svg {
+  width: 7.25rem;
+  max-width: 7.25rem;
+  height: 7.25rem;
+  max-height: 7.25rem;
+}
+
 .meet-card .team-badge {
   grid-column: 1 / -1;
   justify-self: start;
@@ -3569,11 +3578,29 @@ p:last-child {
     padding: 0.55rem 0.6rem;
   }
 
+  .meet-card:not(.meet-card--lead) .meet-visual,
+  .meet-card:not(.meet-card--lead) .meet-visual img,
+  .meet-card:not(.meet-card--lead) .meet-visual svg {
+    width: 6.75rem;
+    max-width: 6.75rem;
+    height: 6.75rem;
+    max-height: 6.75rem;
+  }
+
   .meet-card--lead {
-    grid-template-columns: 6.75rem minmax(0, 1fr);
+    grid-template-columns: 8.5rem minmax(0, 1fr);
     grid-template-rows: auto 1fr;
     gap: 0.45rem 0.55rem;
     padding: 0.55rem 0.6rem;
+  }
+
+  .meet-card--lead .meet-visual,
+  .meet-card--lead .meet-visual img,
+  .meet-card--lead .meet-visual svg {
+    width: 8.5rem;
+    max-width: 8.5rem;
+    height: 8.5rem;
+    max-height: 8.5rem;
   }
 
   .meet-card .team-badge {
