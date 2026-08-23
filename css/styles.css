@@ -2861,9 +2861,9 @@ p:last-child {
 .meet-card {
   position: relative;
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: 7.25rem minmax(0, 1fr);
   gap: 0.7rem 0.75rem;
-  align-items: stretch;
+  align-items: center;
   padding: 0.85rem 0.9rem;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -2879,18 +2879,19 @@ p:last-child {
 
 .meet-visual {
   position: relative;
-  align-self: stretch;
-  height: 100%;
-  width: auto;
+  align-self: center;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
+  overflow: hidden;
   background: transparent;
 }
 
 .meet-visual::before {
   content: "";
   display: block;
-  height: 100%;
-  aspect-ratio: 1 / 1;
+  width: 100%;
+  padding-top: 100%;
 }
 
 .meet-visual img,
@@ -3031,7 +3032,7 @@ p:last-child {
 
 .meet-card--lead {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-columns: 8.25rem minmax(0, 1fr);
   grid-template-rows: auto 1fr;
   grid-column: 1 / -1;
   border-color: #cfc8ff;
@@ -3048,8 +3049,9 @@ p:last-child {
 }
 
 .meet-card--lead .meet-visual {
-  align-self: stretch;
-  height: 100%;
+  align-self: center;
+  width: 100%;
+  height: auto;
 }
 
 .meet-card--text {
@@ -3120,7 +3122,7 @@ p:last-child {
   }
 
   .meet-card--lead {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: 8.25rem minmax(0, 1fr);
     grid-template-rows: auto 1fr;
     padding: 1.35rem 1.5rem;
   }
@@ -3560,15 +3562,15 @@ p:last-child {
 
   .meet-card {
     display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: stretch;
+    grid-template-columns: 6.75rem minmax(0, 1fr);
+    align-items: center;
     text-align: left;
     gap: 0.45rem 0.55rem;
     padding: 0.55rem 0.6rem;
   }
 
   .meet-card--lead {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-columns: 6.75rem minmax(0, 1fr);
     grid-template-rows: auto 1fr;
     gap: 0.45rem 0.55rem;
     padding: 0.55rem 0.6rem;
@@ -3588,8 +3590,9 @@ p:last-child {
   }
 
   .meet-visual {
-    align-self: stretch;
-    height: 100%;
+    align-self: center;
+    width: 100%;
+    height: auto;
     aspect-ratio: 1 / 1;
     background: transparent;
   }
