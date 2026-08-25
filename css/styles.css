@@ -208,26 +208,34 @@ a:hover {
   color: var(--purple);
 }
 
-.nav {
-  display: none !important;
-  grid-column: 1 / -1;
-  flex-direction: column;
-  gap: 0.2rem;
-  padding: 0.4rem 0 0.2rem;
-}
-
+.nav,
 .header-tools {
-  display: none !important;
+  display: none;
   grid-column: 1 / -1;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.55rem;
-  padding-bottom: 0.35rem;
 }
 
 .site-header.is-open .nav,
 .site-header.is-open .header-tools {
-  display: flex !important;
+  display: flex;
+}
+
+.nav {
+  flex-direction: column;
+  gap: 0.15rem;
+  width: 100%;
+  margin-top: 0.15rem;
+  padding: 0.45rem;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: var(--card);
+}
+
+.header-tools {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  width: 100%;
+  padding: 0.15rem 0 0.35rem;
 }
 
 .nav a {
@@ -4237,39 +4245,8 @@ html, body {
 }
 
 
-/* hard hide leaked header — hamburger chrome on every viewport */
-.nav,
-.header-tools {
-  display: none !important;
-  visibility: hidden !important;
-  position: absolute !important;
-  left: -9999px !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  pointer-events: none !important;
-}
-.site-header.is-open .nav,
-.site-header.is-open .header-tools {
-  display: flex !important;
-  visibility: visible !important;
-  position: static !important;
-  left: auto !important;
-  width: auto !important;
-  height: auto !important;
-  overflow: visible !important;
-  pointer-events: auto !important;
-}
-.site-header.is-open .nav {
-  flex-direction: column !important;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-.site-header.is-open .header-tools {
-  flex-direction: row;
-  flex-wrap: wrap;
+.site-header.is-open .nav a {
+  width: 100%;
 }
 
 [data-theme="dark"] .chip-row li,
