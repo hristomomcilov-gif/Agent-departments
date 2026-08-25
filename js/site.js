@@ -52,8 +52,8 @@
     function setOpen(open) {
       header.classList.toggle("is-open", open);
       toggle.setAttribute("aria-expanded", open ? "true" : "false");
-      if (nav) nav.hidden = !open && window.matchMedia("(max-width: 1179px)").matches;
-      if (tools) tools.hidden = !open && window.matchMedia("(max-width: 1179px)").matches;
+      if (nav) nav.hidden = !open;
+      if (tools) tools.hidden = !open;
     }
     setOpen(false);
     toggle.addEventListener("click", function () {
