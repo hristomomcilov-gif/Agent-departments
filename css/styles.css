@@ -3703,7 +3703,7 @@ p:last-child {
 
 @media (min-width: 640px) {
   #creates .make-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 
   #creates .make-card {
@@ -4484,6 +4484,8 @@ html, body {
 }
 
 .hiw--icons {
+  display: flex;
+  flex-direction: column;
   max-width: 28rem;
   margin: 0 auto;
   gap: 0.7rem;
