@@ -119,6 +119,11 @@
   margin: 1.7rem 0 0.65rem;
 }
 
+.wrap--narrow > h3 {
+  margin: 1.2rem 0 0.4rem;
+  font-size: 1.05rem;
+}
+
 .wrap--narrow > p,
 .wrap--narrow > ul,
 .wrap--narrow > ol {
