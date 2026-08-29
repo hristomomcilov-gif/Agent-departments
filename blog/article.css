@@ -1,0 +1,50 @@
+.draft-banner {
+  margin: 0;
+  padding: 0.55rem 1rem;
+  background: #fff4cc;
+  color: #6b4a00;
+  font-size: 0.8rem;
+  font-weight: 750;
+  text-align: center;
+  border-bottom: 1px solid #f0df9a;
+}
+
+[data-theme="dark"] .draft-banner {
+  background: #3d3314;
+  color: #f6e3a1;
+  border-bottom-color: #5a4a1c;
+}
+
+.article-prose {
+  max-width: 40rem;
+}
+
+.article-prose h2 {
+  margin: 1.6rem 0 0.55rem;
+  font-size: 1.15rem;
+}
+
+.article-prose p,
+.article-prose li {
+  color: var(--ink-dim);
+}
+
+.article-list {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.article-list a {
+  text-decoration: none;
+}
+
+.next-reads {
+  margin-top: 1.6rem;
+}
+
+.next-reads p {
+  margin: 0.4rem 0 0;
+}
